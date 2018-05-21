@@ -1,0 +1,937 @@
+\RequirePackage{lineno}
+\documentclass[aps,preprint,tightenlines,superscriptaddress,showpacs,byrevtex,amsmath,amssymb,nofloatfix]{revtex4}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{rotating}
+\usepackage{bigstrut,bigdelim,multirow}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{lineno}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{overpic}
+\usepackage{multirow}
+\usepackage{caption}
+% \captionsetup{justification=centering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand\thesection{\arabic{section}}
+
+\def\Journal#1#2#3#4{{#1} {\bf #2}, #3 (#4)}
+\def\IJMP{Int. J. Mod. Phys. A}
+\def\NCA{Nuovo Cimento}
+\def\NIM{Nucl. Instrum. Methods}
+\def\NIMA{Nucl. Instrum. Methods A}
+\def\NPB{Nucl. Phys. B}
+\def\PLB{Phys. Lett. B}
+\def\PRL{Phys. Rev. Lett.}
+\def\PRD{Phys. Rev. D}
+\def\PRP{Phys. Rep.}
+\def\ZPC{Z. Phys. C}
+\def\EPJC{Eur. Phys. J. C}
+\def\HEPNP{HEP \& NP}
+%\tiny \scriptsize \footnotesize \small \normalsize \large \Large \LARGE \huge \Huge
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\normalsize
+\parskip=5pt plus 1pt minus 1pt
+\linenumbers
+
+\graphicspath{{figure/}}
+\DeclareGraphicsExtensions{.eps,.png,.ps}
+
+\preprint{\vbox{\hbox{}
+                \hbox{BESIII Analysis Memo - V4.0}
+                }}
+
+\title{\boldmath Search for $\chi_{c0,2}(2P)$ and $X_{2}(4013)$ via $e^{+}e^{-}\rightarrow \gamma D\bar{D}$}
+\author{Y.~Hu, and C.~Z.~Yuan  \\
+\vspace{0.2cm} \vspace{0.2cm}
+Institute of High Energy Physics, Beijing, 100049, China
+}
+\vspace{0.2cm}
+\date{\today}
+
+\begin{abstract}
+  Using the data samples collected with BESIII detector operating at the BEPCII storage ring, at center-of-mass (c.m.) energy $\sqrt{s}$=4.18GeV, the production of $\chi_{c0,2}(2P)$ and $X_{2}(4013)$ have been searched for via $e^{+}e^{-}\rightarrow \gamma D\bar{D}$, no obvious signal of those structures were found. The upper limits of  $\sigma[e^{+}e^{-}\rightarrow \gamma \chi_{c0,2}(2P)] \cdot \mathcal{B}(\chi_{c0,2}(2P) \to D\bar{D})$ and $\sigma[e^{+}e^{-}\rightarrow \gamma X_{2}(4013)] \cdot \mathcal{B}(X_{2}(4013) \to D\bar{D})$  at 90\% C.L. are given.
+
+\end{abstract}
+
+\pacs{14.40.Rt, 13.20.Gd, 13.66.Bc, 13.40.Hq, 14.40.Pq}
+
+\maketitle
+
+\section{Introduction}
+
+
+In the charmonium spectrum, The n=1 P-wave spin triplet $^{3}P_{J}$ ($\chi_{cJ}$) have been all discovered and studied well. But we know little about their first radial excited states. The determination of P-wave spin triplet radial excited states will support the exactness of potential model, and provide more platform for the study of non-perturbative QCD. According to potential model estimates, the charmonium spin triplet 2P states $\chi_{cJ}(2P)$ lie between 3.9 and 4.0 GeV~\cite{Highercharmonia,chicJ2p_mass1,chicJ2p_mass2}, above the threshold of $D\bar{D}$.
+
+In 2005, the Belle Collaboration reported the observation of a new particle in the process $\gamma\gamma\rightarrow D\bar{D}$ with a significant of 5.3$\sigma$~\cite{Belle_3930}. The measured mass and width are M=3929$\pm$5$\pm$2 MeV/$c^{2}$ and  $\Gamma_{total}$=29$\pm$10$\pm$2 MeV, it was called Z(3930). The BaBar Collaboration also observed Z(3930) in the same process with a higher significant of 5.6$\sigma$ ~\cite{BaBar_3930}, the mass and width are M=3926.7$\pm$2.7$\pm$1.1 MeV/$c^{2}$ and  $\Gamma_{total}$=21.3$\pm$6.8$\pm$3.6 MeV, which agrees with Belle's result. The decay angular distribution of Z(3930) has a form of $\sin^{4}\theta$ which supports Z(3930) is a tensor and has  positive parity and C-parity: $J^{PC}=2^{++}$. The parameters obtained are consistent with the expectations for the $\chi_{c2} (2P)$, so BaBar identified Z(3930) as $\chi_{c2} (2P)$.
+
+So far, $\chi_{c2} (2P)$ is the only unambiguously identified radially excited P-wave charmonium state. Recently, the BaBar Collaboration confirmed the observation of X(3915) in the $\gamma \gamma \to J/\psi \omega$ process and indicated that $X(3915)$ is the $\chi_{c0}(2P)$ charmonium by a spin-parity analysis~\cite{BaBar_3915}. But assigning the $X(3915)$ as the $\chi_{c0}(2P)$ state faces many problems. Theory predict that $\chi_{c0} (2P)$ dominantly decay to $D\bar{D}$~\cite{Highercharmonia}, but it absent in the process $\gamma\gamma\rightarrow D\bar{D}$. Some theory consider that the $\chi_{c0} (2P)$ already contain in the $D\bar{D}$ invariant mass distribution of the process $\gamma\gamma\rightarrow D\bar{D}$ with a mass around 3840 MeV and width of about 200 MeV~\cite{chic02ptheory1}. Recently, the Belle Collaboration observed a new particle $X(3860)$ in the $D\bar{D}$  invariant mass distribution of the process $e^{+}e^{-}\rightarrow J/\psi D\bar{D}$ with  mass $3862^{+26}_{-32}(stat)^{+40}_{-13}(syst)$ MeV/$c^{2}$ and width $201^{+154}_{-67}(stat)^{+88}_{-82}(syst)$ MeV, and determined it as a candidate of $\chi_{c0}(2P)$.
+
+%The  In the same mass region, Belle Collaboration report another structure with mass 3943 $\pm$ 11(stat) $\pm$ 13(syst) MeV/$c^{2}$ and total width 87 $\pm$ 22(stat) $\pm$ 26(syst) MeV in the $J/\psi \omega$ invariant mass distribution in exclusive $B \to K \omega J/\psi$ decays~\cite{Belle_3915}, and conformed later by BaBar Collaboration with  mass 3914^{+3.8}_{-3.4}(stat)$\pm$2.0(syst) MeV/$c^{2}$, and width 34^{+12}_{-18}(stat)$\pm$5(syst) MeV~\cite{}.
+
+ %Theory predict that $\chi_{c0} (2P)$ dominantly decay to $D\bar{D}$~\cite{Highercharmonia}, but it absent in the process $\gamma\gamma\rightarrow D\bar{D}$. There are many assumption about the existence of  $\chi_{c0} (2P)$, some theory consider that the $\chi_{c0} (2P)$ already contain in the $D\bar{D}$ invariant mass distribution of  the process $\gamma\gamma\rightarrow D\bar{D}$~\cite{chic02ptheory1}, but BaBar identified the $X(3915)$ as $\chi_{c0} (2P)$~\cite{BaBar_3915}. Recently, the Belle Collaboration found a new particle $X(3860)$ in the $D\bar{D}$  invariant mass distribution of the process $e^{+}e^{-}\rightarrow J/\psi D\bar{D}$, and determined it as a candidate of $\chi_{c0} (2P)$.
+
+ Authors of Ref~\cite{chicj2p_th1} calculated the E1 transition partial widths and branching ratios of higher charmonim states to 2P spin triplets using three typical potential models with both lowest- and first-order relativistically corrected wave functions. They found that the transition widths of $\psi(4160)\to \gamma \chi_{cJ}(2P) $ are model-insensitive and relatively large (tens to hundreds of keV) and the corresponding branching ratios are of order $10^{-4}-10^{-3}$, which make the search for $\chi_{cJ}^{'}$ possible at $e^{+}e^{-}$ colliders such as BEPCII/BESIII.
+
+Because  $\chi_{c0,2} (2P)$ dominantly decays to $D\bar{D}$~\cite{Highercharmonia}, so in this analysis we search for $\chi_{c0,2} (2P)$ via the process  $e^{+}e^{-}\rightarrow \gamma D\bar{D}$. The $D\bar{D}$ pair are reconstructed and selected with double $D$-tag method, $D^{0}$ mesons are reconstructed in four decay modes ($D^{0} \rightarrow K^{-}\pi^{+}/K^{-}\pi^{+}\pi^{0}/K^{-}\pi^{+}\pi^{+}\pi^{-}/K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0}$) and the $\bar{D}^{0}$ mesons in the charge conjugate final states, $D^{+}$ mesons in five decay modes ($D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}/K^{-}\pi^{+}\pi^{+}\pi^{0}/ K^{0}_{S}\pi^{+}/K^{0}_{S}\pi^{+}\pi^{0}/K^{0}_{S}\pi^{+}\pi^{-}\pi^{+}$) and the $D^{-}$ mesons in the charge conjugate final states, and we also reconstruct and select one extra $\gamma$ besides those from the $D$ decays.
+
+
+The well-known narrow X(3872) state was first observed by Belle~\cite{X3872} in 2003, and it was confirmed subsequently by several other experiments~\cite{CDFX3872,D0X3872,BABARX3872}. The discovery of the the X(3872) resonance has opened new perspectives in hadron spectroscopy. The X(3872), even though it clearly contains a $c\bar{c}$ pair, does not fit well within the conventional charmonium spectrum. It could be a $D\bar{D}^{*}$ bound state with $J^{PC} = 1^{++}$, the quantum numbers confirmed later on in Ref.~\cite{X3872JPC}. Within the molecular description of the X(3872), the existence of its heavy quark spin symmetry partners $X_{2}$($J^{PC} = 2^{++}$) S-wave $D^{*}\bar{D}^{*}$ bound state was predicted in the effective field theory (EFT) approach in Refs.~\cite{PRD056004,PRD076006}. According to the heavy quark spin symmetry (HQSS), the binding energy of the $X_{2}$ resonance was found to be similar to that of the X(3872),i.e.,
+\begin{equation}\label{MX2-MX3872}
+  M_{X_{2}}-M_{X(3872)} \approx M_{D^{*}}-M_{D} \approx 140 {\rm MeV}.
+\end{equation}
+If taking into account isospin breaking within the formalism of Ref.~\cite{PRD014029}, it can be predicted that the mass of the $2^{++}$ state lies in the vicinity of 4013 MeV/$c^{2}$. According to~\cite{DecaywidthX4013}, a possible discovery of a $2^{++}$ charmonium-like state with a mass around 4013 MeV/$c^{2}$ as a consequence of HQSS would provide a strong support for the interpretation that the X(3872) is dominantly a $D\bar{D}^{*}$ hadronic molecule. It is thus very important to search for such a tensor resonance. The authors estimated the partial width of $X_{2}\rightarrow D\bar{D}$ (including both the charged and neutral channels) and $X_{2}\rightarrow D\bar{D}^{*}(D^{*}\bar{D})$ (including both the charged and neutral channels as well as the charge-conjugated modes) to be:
+\begin{equation}\label{X2partialwidth}
+  \Gamma(X_{2}\rightarrow D\bar{D})=(1.2\pm {\underbrace{0.3}_{sys(\Lambda)}}~_{-0.4}^{+1.3}) {\rm MeV}.
+\end{equation}
+\begin{equation}\label{X2partialwidth}
+  \Gamma(X_{2}\rightarrow D\bar{D}^{*}) + \Gamma(X_{2}\rightarrow D^{*}\bar{D}) =(2.9\pm {\underbrace{0.5}_{sys(\Lambda)}}~_{-1.0}^{+2.0}) {\rm MeV}.
+\end{equation}
+this result leads to a total $X_{2}$ width of the order of 2-8 MeV. We can also search for $X_{2}(4013)$ via $e^{+}e^{-}\rightarrow \gamma X_{2}(4013) \rightarrow \gamma D\bar{D}$.
+
+
+\section{BESIII/BEPCII}
+
+BESIII/BEPCII~\cite{bepc2} is a major upgrade of
+BESII/BEPC~\cite{bepc}. The BESIII detector is designed to study
+hadron spectroscopy and $\tau$-charm physics~\cite{bes3yellow}. The
+cylindrical BESIII is composed of a Helium-gas based drift chamber
+(MDC), a Time-of-Flight (TOF) system, a CsI(Tl) Electro-Magnetic
+Calorimeter (EMC) and a RPC-based muon chamber (MUC) with a
+superconducting magnet providing 1.0 T magnetic field in the central
+region of BESIII. The expected charged particle momentum resolution is 0.5\% at 1 GeV/c track momentum. For 1.0 GeV photon,
+the energy resolution can reach 2.5\%(5\%) in the barrel(endcaps) of the EMC.
+
+
+\section{Data samples and BOSS version}
+
+\subsection{Data}
+
+  The analysis is performed based on the 3.189 fb$^{-1}$ data samples at $\sqrt{s}=4.18$ GeV collected with BESIII detector at the BEPCII. The center-of-mass energy is measured using di-muon events, with an uncertainty of $\pm$1 MeV~\cite{ecms_4180}. The integrated luminosity is measured by using Bhabha events with an uncertainty 1.0\%.~\cite{limu_4180}.
+
+
+\subsection{Monte Carlo Simulation}
+
+To estimate the reconstruction efficiency and optimize selection criteria, we generate pure signal MC samples of $e^{+}e^{-} \rightarrow \gamma \chi_{c0}(2P)$ with $\chi_{c0}(2P) \rightarrow D\bar{D}$, $e^{+}e^{-} \rightarrow \gamma \chi_{c2}(2P)$ with $\chi_{c2}(2P) \rightarrow D\bar{D}$ and $e^{+}e^{-} \rightarrow \gamma X_{2}(4013)$ with $X_{2}(4013) \rightarrow D\bar{D}$  at $\sqrt{s} = 4.18$ GeV.  The $D^{0}$, $\bar{D}^{0}$, $D^{+}$ and $D^{-}$ decay modes are the same as stated above.  The Initial State Radiation (ISR) is simulated with {\sc KKMC}~\cite{KKMC}, where the Born cross section of each process is assumed to follow the $Y(4160)$ line-shape. Those exclusive MC samples are generated evenly according to the helicity amplitudes formulas in Refs~\cite{amplitude}. Final State Radiation (FSR) effect associated with leptons is handled by {\sc PHOTOS}. MC sample for each channel contains 200,000 events and is a mixture of the 4(5) $D$ decays modes and 4(5) $\bar{D}$ decays modes accordingly to $D$ branching fractions.
+
+
+In order to estimated the background level, inclusive MC samples are generated at $\sqrt{s}=4.18$ GeV with 10 times equivalent luminosity as data, but those samples don't contain the signal events. They contain 5 categories:
+\begin{itemize}
+  \item $D\bar{D}$ samples, the process where $e^{+}e^{-}$ goes to all the different \emph{D} meson pairs, simulated with ConExc;
+  \item QED samples, the processes where $e^{+}e^{-}$ goes to lepton and photon pairs,  simulated with KKMC, Babayaga, and BesTwogam;% Babayaga\cite{Bhabha};
+  \item ISR, the process where $e^{+}e^{-}$ radiates photons just before colliding and makes a vector charmonium states, including $J/\psi$, $\psi'$, $\psi(3770)$, ..., simulated by KKMC;
+%  \item $\gamma X/Y/Z$, the processes where $e^{+}e^{-}$ annihilate into a photon and an $X/Y/Z$ particle;
+  \item continuum hadronic samples, the process where $e^{+}e^{-}$ goes to quark pairs ($u\bar{u}$, $d\bar{d}$, $s\bar{s}$), simulated by KKMC.
+\end{itemize}
+
+%The known decay modes of the charmonia are generated with EvtGen~\cite{EvtGen} with branching fractions being set to the world average values according to PDG(2016)~\cite{PDG} and the remaining events associate with charmonium decays are generated with Lundcharm~\cite{Lundcharm}  while other hadronic events are generated with PYTHIA~\cite{PYTHIA}.
+
+
+%For background study, we also generate MC samples some other processes at each c.m. energy  points as show in the Table~\ref{background_table}. The $D^{0}$, $\bar{D}^{0}$, $D^{+}$ and $D^{-}$  decay modes are the same as stated above. The Initial State Radiation(ISR) is simulated with KKMC~\cite{KKMC}, where the Born cross section of each process is assumed to follow the $Y(4260)\rightarrow \pi^{+}\pi^{-} J/\psi$ line-shape~\cite{Y4260shape}. Those exclusive MC is generated evenly in phase space. Final State Radiation(FSR) effect associate with leptons is handled by PHOTOS.
+%
+%
+% \begin{table}[!htbp]
+%\caption{The generated background MC samples.}
+%\label{background_table}
+%\begin{tabular}{|c| c|}
+%\hline
+%      Process&    Events number  \\
+%      \hline
+%    $e^{+}e^{-} \rightarrow \pi^{+}\pi^{-}D^{0}\bar{D}^{0}$  &200,000 \\
+%    \hline
+%    $e^{+}e^{-} \rightarrow \pi^{+}\pi^{-}D^{+}D^{-}$  &200,000 \\
+%    \hline
+%    $e^{+}e^{-} \rightarrow D^{*+}D^{*-}$, $D^{*+}\rightarrow D^{0}\pi^{+}+c.c.$  &200,000 \\
+%    \hline
+%    $e^{+}e^{-} \rightarrow D^{*+}\bar{D}^{0}\pi^{-}$, $D^{*+}\rightarrow D^{0}\pi^{+}+c.c.$  &200,000 \\
+%     \hline
+%     $e^{+}e^{-} \rightarrow D^{*}_{0}(2400)^{0}\bar{D}^{0}$, $D^{*}_{0}(2400)^{0}\rightarrow D^{+}\pi^{-}+c.c.$  &200,000\\
+%     \hline
+%      $e^{+}e^{-} \rightarrow D^{*}_{0}(2400)^{+}D^{-}$, $D^{*}_{0}(2400)^{+}\rightarrow D^{0}\pi^{+}+c.c.$  &200,000\\
+%     \hline
+%     $e^{+}e^{-} \rightarrow D_{1}(2430)^{0}\bar{D}^{0}$, $D_{1}(2430)^{0}\rightarrow D^{*+}\pi^{-}+c.c.$  &200,000\\
+%     \hline
+%     $e^{+}e^{-} \rightarrow D^{*}_{2}(2460)^{0}\bar{D}^{0}$, $D^{*}_{2}(2460)^{0}\rightarrow D^{*+}\pi^{-}+c.c.$ & 200,000\\
+%    \hline
+%\end{tabular}
+%\end{table}
+%
+
+The full detector is simulated by GEANT4-based simulation software BOOST.% and the current analysis is performed under BOSS7.0.2p01.
+
+
+
+\subsection{BOSS version}
+The BOSS version is 702p02. DTagAlg-00-01-05 is used to reconstruct and select \emph{D}. DTagTool-00-00-11 provides useful functions for \emph{D}-double tags.
+
+\section{Event selection}
+
+\subsection{Reconstruction of $\emph{D}$ meson}
+The $\emph{D}$ candidates are reconstructed and selected with the DTagAlg package, which was developed for Dtagging at BESIII and it imposes regular criteria on event selection. The relevant cuts are listed below, and more detail can be found in the note for DTagAlg in detail~\cite{DTagAlg}.
+
+\subsubsection{Kaon and Pion Selection}
+Charged tracks must be fitted by Kalman filter method successfully and come from the interaction region in three dimensions. Applying the real beam position, each charged track must satisfy the following requirements(excluding those from $K_{S}$ decays):
+\begin{itemize}
+  \item the polar angle: $|\cos\theta|<0.93$;
+  \item distance of the track from the beam position in $x$-$y$ plane: $|dr| <$ 1 cm;
+  \item distance of the track from the beam position in $z$ direction: $|dz| <$ 10 cm.
+\end{itemize}
+
+Charged tracks which satisfy the good track requirements described above are identified as kaons or pions using the PID package. This package utilizes both $dE/dx$ and TOF information. The probability of each particle hypothesis for every charged track can be obtained by combining dE/dx and TOF $\chi^{2}$ variables with $\chi^{2}=\chi^{2}_{dE/dx}+\chi^{2}_{TOF}$ and corresponding number of degrees of freedom. A charged track is required to satisfy the following requirements to be identified as a kaon or a pion:
+%A charged track is required to satisfy $P(\pi) \geq P(K)$ to be identified as pion, and to satisfy $P(K) \geq P(\pi)$ to be identified as kaon.
+\begin{itemize}
+  \item for kaon:  $prob.(K)> prob.(\pi)$;
+  \item for pion:  $prob.(\pi)> prob.(K)$.
+\end{itemize}
+
+\subsubsection{Good photon selection}
+
+Showers are mainly used in $\pi^{0}$ reconstruction, and they must satisfy fiducial and shower-quality requirements as the following:
+\begin{itemize}
+  \item minimum energy requirement for barrel showers ($|\cos\theta|<0.8$): $E_{min}>$25 MeV,
+  \item minimum energy requirement for end-cap showers ($0.86<|\cos\theta|<0.92$): $E_{min}>$50 MeV,
+  \item EMC time requirements if an events has one or more charged track reconstructed: $0\leq T\leq14$ (in units of 50 ns).
+  \item The angle between the cluster and the nearest charged track is larger than 20 degrees.
+%  \item EMC time requirements if an events has no charged track reconstructed: $|T-T_{0}|$ $\leq$10, where $T_{0}$ is the time of first shower in the shower container.
+\end{itemize}
+For the extra $\gamma$, the requirements have little difference. The end-cap showers should satisfied the requirement of ($0.84<|\cos\theta|<0.92$): $E_{min}>$50 MeV.
+
+\subsubsection{$\pi^{0}$ selection}
+$\pi^{0}$ is reconstructed with a pair of photons which satisfy requirements described above using package Pi0EtatoGGRecAlg. Candidates with both photons from end-cap EMC regions are rejected because of the bad resolution. An unconstrained invariant mass M($\gamma\gamma$) is calculated from energies and momenta of the two photons. A kinematic fit with the mass of the $\pi^{0}$ constraint to the PDG value is also performed and the resulting energy and momentum of the $\pi^{0}$ is saved for further analyses. Then $\pi^{0}$ candidates are required to satisfy the following requirements:
+\begin{itemize}
+  \item $\chi^{2}$ value from kinematic fit: $\chi^{2}<2500$,
+  \item Unconstrained invariant mass is required: 0.115 $< M(\gamma\gamma)<$ 0.150 GeV/$c^{2}$.
+\end{itemize}
+
+\subsubsection{$K^{0}_{S}$ selection}
+
+$K^{0}_{S}$ candidates are reconstructed using VeeVertexAlg package with two oppositely charged tracks. These tracks were not subjected to the track quality or particle identification requirements. Instead, the distance to the average beam position in $z$ direction is required to be within 20 cm, and the polar angle to be $|\cos\theta|<0.93$. For each pair of tracks, a vertex fit is performed and the resulting track parameters are used to get invariant mass $M(\pi\pi)$.   Then a secondary vertex fit is performed to guarantee the $K^{0}_{S}$ candidate from interaction region of collision vertex.  The requirements for $K^{0}_{S}$ candidate are as follows:
+\begin{itemize}
+  \item invariant mass from vertex fit: 0.487 $< M_{\pi\pi} <$ 0.511 GeV/$c^{2}$;
+  \item $\chi^{2}$ from vertex fit: $\chi^{2} < 100$.
+  \item $\chi^{2}$ from second vertex fit: $\chi^{2}_{second} < 100$.
+  \item decay length L: $L/\sigma(L)> 2$.
+%  \item the decay vertex of $K^{0}_{s}$ to be separated from the interaction region with a significance greater than two standard deviations: $L/\sigma_{L}>2$, where L denotes the decay length of $K^{0}_{s}$.
+\end{itemize}
+
+%\begin{figure}[b]
+%\captionsetup{justification=raggedright}
+%    \includegraphics[width=0.45\textwidth]{plotofGamDD/D0m_4180.eps}
+%    \includegraphics[width=0.45\textwidth]{plotofGamDD/D0barm_4180.eps}
+%  \caption{Distributions of $M(D^{0})$(left) and $M(\bar{D}^{0})$(right) at $\sqrt{s}$ = 4.18 GeV. The MC are normalized according to the maximum bin content.}
+%  \label{D0andD0bar}
+% \end{figure}
+
+\subsubsection{D Candidates Selection}
+\emph{D} candidates are reconstructed with DTagAlg package. The $D$ Decay modes we reconstructed are $D^{0} \rightarrow K^{-}\pi^{+}/K^{-}\pi^{+}\pi^{0}/K^{-}\pi^{+}\pi^{+}\pi^{-}/K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0}$ and $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}/K^{-}\pi^{+}\pi^{+}\pi^{0}/ K^{0}_{S}\\\pi^{+}/K^{0}_{S}\pi^{+}\pi^{0}/K^{0}_{S}\pi^{+}\pi^{-}\pi^{+}$, and the $\bar{D}^{0}$ and $D^{-}$ mesons in the charge conjugate final states. After $K$, $\pi$, $K^{0}_{S}$ and $\pi^{0}$ candidates are determined, the \emph{D} candidate is formed by looping over all these daughter tracks to make different combinations. Taking $D^{0}\rightarrow K^{-}\pi^{+}$ as an example, a two dimensional for-loop of all kaon and pion candidates could be applied to combine each kaon and pion to get all the \emph{D} candidates for later analysis. And the difference between \emph{D} candidate invariant mass and \emph{D} nominal mass is used to select events. It is required to be: $|M(D)-M(D)_{PDG}| <$ 0.12 GeV/$c^{2}$. We will store all the $D$ candidates reconstructed for afterwards use.
+
+
+
+\subsection{Event selection of $e^{+}e^{-}\rightarrow\gamma  D\bar{D}$}
+  After storing all $D$ mesons the double tag (DT) method is used to reconstruct and select $D\bar{D}$ pair candidate. In each event, we can reconstruct several $D/\bar{D}$ candidates of same or different decay modes. Then those $D$ and $\bar{D}$ candidates can be combined to be several $D\bar{D}$ pair candidates of same or different double tag modes.  We use the method `findDTag' in `DTagTool' package to select the best $D\bar{D}$ pair in one double $D$-tag mode we wanted. We provide the double $D$-tag mode as input, it will search for double tag candidate with all combinations of charm. If there is more than one $D\bar{D}$ pair candidate per possible double $D$-tag mode, the one with the average mass $\hat{M} = [M(D) + M(\bar{D})]/2$ closest to the nominal mass of $D$ (from PDG) is chosen.  Then for every one $D\bar{D}$ pair candidate, one extra $\gamma$ is required, and a kinematic fit is performed for the final states. We constrain the total 4-momentum of all the charged tracks we selected and good photon to that of the initial $e^{+}e^{-}$ system; if $\pi^0$ or $K^{0}_S$ exists in the final state, its mass constraint is applied. If there are several $D\bar{D}$ pair candidates with different double tag modes or several extra $\gamma$ in one event, the one with the smallest $\chi^{2}$ of kinematic fit is chosen. The distributions of $\chi^{2}$ from  kinematic fit is shown in the left panel of Fig.~\ref{gammaDDchisq}. We required $\chi^{2}<68$ and $\chi^{2}<32$ for processes $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D^{0}\bar{D}^{0}$ and $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D^{+}D^{-}$  respectively, which is optimized using the figure of merit (FOM) $\frac{S}{\sqrt{S+B}}$, as shown in Fig.~\ref{gammaDDchisq}, where the S and B are calculated from signal MC and inclusive MC, respectively. The signal cross section to estimate S is determined by the measured value.
+
+
+\begin{figure}[t]
+   \captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/gamD0chisq_4180.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/gamDpchisq_4180_Ksv.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/gamD0chisqfom_4180}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/gamDpchisqfom_4180_Ksv}
+
+  \caption{\small The distribution of $\chi^{2}$ from kinematic fit (up) and the optimization of $\chi^{2}$ cut (down). The left are for $\chi_{c2} (2P)\rightarrow D^{0}\bar{D}^{0}$ channel and the right are for $\chi_{c2} (2P)\rightarrow D^{+}D^{-}$ channel.}
+  \label{gammaDDchisq}
+\end{figure}
+
+
+
+\section{Study of $e^{+}e^{-}\rightarrow \gamma \chi_{c2}(2P), \chi_{c2}(2P)\rightarrow D^{0}\bar{D}^{0}$}
+
+   After performing all the selection criteria above, we can get a data sample of $\gamma D^{0}\bar{D}^{0}$. Figure~\ref{mD0andmD0bar} show the invariant mass distribution of $D^{0}$(left) and $\bar{D}^{0}$(right), in which, the dots with error bar are for data, green histogram are for the signal MC, red histogram are for inclusive MC. We can see clear $D^{0}$ and $\bar{D}^{0}$ signal, the backgrounds of non-$D^{0}\bar{D}^{0}$ are a flat distribution in the invariant mass distribution of $D^{0}$ and $\bar{D}^{0}$. We require 1.845$ <$M($D^{0}$)$<$1.890GeV/$c^{2}$ and 1.845 $<$ M($\bar{D}^{0}$)$<$ 1.890GeV/$c^{2}$ to reject some non-$D^{0}\bar{D}^{0}$ backgrounds.
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/D0m_4180.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/D0barm_4180.eps}
+  \caption{\small Invariant mass distribution of $D^{0}$(left) and $\bar{D}^{0}$(right). The MC are normalized according to the maximum bin content.}
+  \label{mD0andmD0bar}
+ \end{figure}
+
+For the process $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D^{0}\bar{D}^{0}$, there will be many backgrounds from open charm processes under the  $D^{0}$ and $\bar{D}^{0}$ peaks. As shown in Fig.~\ref{D0gamvsD0gam}, in the Dalitz plot of $M^{2}(D^{0}\gamma)$ and  $M^{2}(\bar{D}^{0}\gamma)$  for data, we can see clear signal of $D^{*0}$. We can use M($D^{0}\gamma$) - M($D^{0}$) + $M(D^{0})_{PDG}$ and M($\bar{D}^{0}\gamma$) - M($\bar{D}^{0}$) + $M(D^{0})_{PDG}$ instead of M($D^{0}\gamma$) and M($\bar{D}^{0}\gamma$) to represent the invariant mass distribution of $D^{0}\gamma$ and $\bar{D}^{0}\gamma$ respectively where the $M(D^{0})_{PDG}$ is PDG value of $D^{0}$ mass. This can get better mass resolution by eliminating the mass resolution effect coming from the reconstruction of $D^{0}$. As shown in Fig.~\ref{MD0gam}, we can see clear signal of $D^{*}$ in the distribution of M($D^{0}\gamma$) - M($D^{0}$) + $M(D^{0})_{PDG}$ and M($\bar{D}^{0}\gamma$) - M($\bar{D}^{0}$) + $M(D^{0})_{PDG}$ for data and inclusive MC. In this distribution, the first peak is mainly come from the process $e^{+}e^{-} \rightarrow D^{0}\bar{D}^{0}$, the second peak is mainly come from the process $e^{+}e^{-} \rightarrow D^{*0}\bar{D}^{0} \rightarrow D^{0}\bar{D}^{0}\pi^{0} + c.c.$ with one missing photon from $\pi^{0}$, and the third peak is mainly come from the process $e^{+}e^{-} \rightarrow D^{*0}\bar{D}^{0} \rightarrow D^{0}\bar{D}^{0}\gamma + c.c. $.   We require M($D^{0}\gamma$) - M($D^{0}$) + $M(D^{0})_{PDG} >$ 2.03 GeV/$c^{2}$  and M($\bar{D}^{0}\gamma$) - M($\bar{D}^{0}$) + $M(D^{0})_{PDG} >$ 2.03 GeV/$c^{2}$ to remove most of the backgrounds from $D^{*}$ events.
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.32\textwidth]{plotofGamDD/D0gamdaliz_4180_data.eps}
+    \includegraphics[width=0.32\textwidth]{plotofGamDD/D0gamdaliz_4180_inclu.eps}
+    \includegraphics[width=0.32\textwidth]{plotofGamDD/D0gamdaliz_4180_sig.eps}
+
+  \caption{\small The Dalitz plot of $M^{2}(D^{0}\gamma)$ and  $M^{2}(\bar{D}^{0}\gamma)$ for the process $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D^{0}\bar{D}^{0}$. The left plot is for data, the middle plot is for inclusive MC and the right plot is for signal MC.}
+  \label{D0gamvsD0gam}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+ \captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/mD0gamma_4180.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/mD0bargamma_4180.eps}
+
+  \caption{\small The distribution of M($D^{0}\gamma$) - M($D^{0}$) + $M(D^{0})_{PDG}$ and M($\bar{D}^{0}\gamma$)- M($\bar{D}^{0}$) + $M(\bar{D}^{0})_{PDG}$. The exclusive MC are normalized arbitrarily and he inclusive MC is normalized according to the maximum bin content.}
+  \label{MD0gam}
+\end{figure}
+
+
+After reject the backgrounds from $D^{*}$ events, we can get the invariant distribution of $D^{0}\bar{D}^{0}$. As shown in Fig.~\ref{mDDbar_4180}, the left plot is for the sum of each component of inclusive MC, the right plot is for the data, signal MC, and inclusive MC.  From the left plot, we can see the main backgrounds in the distribution of M($D^{0}\bar{D}^{0}$) are from open charm processes, ISR processes, and continuum processes. According the topology analysis of inclusive MC, the ISR processes are main come from $\gamma_{ISR} \psi(3770)$, the open charm processes are main come from $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}+c.c.$, $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}+c.c.$, $e^{+}e^{-}\rightarrow D^{*+}D^{*-}+c.c.$, $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{0}+c.c.$, $e^{+}e^{-}\rightarrow D^{-}D^{*+}+c.c.$,  $e^{+}e^{-}\rightarrow D^{0}D^{*-}\pi^{+}+c.c.$, $e^{+}e^{-}\rightarrow \gamma \bar{D}^{0}D^{0}+c.c.$, as shown in Table~\ref{background_table_D0}. Those processes become the backgrounds because of the wrong  combination or having the same final states with the signal processes which can't be rejected thoroughly.
+
+ \begin{table}[!htbp]
+\caption{The inclusive background MC samples. The numbers of events are scared according to luminosity, but not include the process $e^{+}e^{-}\rightarrow \gamma \bar{D}^{0}D^{0}$.}
+\label{background_table_D0}
+\begin{tabular}{|c|c|c|}
+  \hline
+  Process &   Cross section(pb)    & Number of generated events  \\
+  \hline
+  $e^{+}e^{-}\rightarrow \gamma_{ISR} \psi(3770)$ & 60  & 190000  \\
+  $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}+c.c.$  &  1211  &3830000  \\
+  $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}+c.c.$ &  2173  &6870000  \\
+  $e^{+}e^{-}\rightarrow D^{*+}D^{*-}+c.c.$       &  2145  & 6780000     \\
+  $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{0}+c.c.$   & 179  &  570000  \\
+  $e^{+}e^{-}\rightarrow D^{-}D^{*+}+c.c.$        &  1296  &4100000      \\
+   $e^{+}e^{-}\rightarrow D^{0}D^{*-}\pi^{+}+c.c.$ & 383 & 1210000 \\
+  $e^{+}e^{-}\rightarrow \gamma \bar{D}^{0}D^{0}$ & -  &200000 \\
+  \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/D0D0barm_4180_incl.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/D0D0barm_4180.eps}
+  \caption{\small The invariant mass distribution of $D^{0}\bar{D}^{0}$.  The left plot is for inclusive MC and each component, the right plot is for data, siganl MC, inclusive MC and sideband backgrounds. The signal MC is normalized arbitrarily and he inclusive MC is normalized according to the maximum bin content.}
+  \label{mDDbar_4180}
+\end{figure}
+
+\subsection{Fit the invariant distribution of $D^{0}\bar{D}^{0}$.}
+
+\subsubsection{Signal shape}
+The shape of the $\chi_{c2}(2P)$ signal can be extracted by using the signal MC. To get the shape of the $\chi_{c2}(2P)$ signal we generated 200,000 events for process $e^{+}e^{-} \rightarrow \gamma \chi_{c2}(2P), \chi_{c2}(2P) \rightarrow D^{0}\bar{D}^{0}$ at $\sqrt{s}$ = 4.18 GeV. The resonance parameters of $\chi_{c2}(2P)$ are coming from PDG value.
+
+\subsubsection{Backgrounds shape}
+
+In the fit, the background shape can be described by MC shapes of each background components. We can get the MC sample of each background components from the inclusive MC, including the processes $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}+c.c.$, $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}+c.c.$, $e^{+}e^{-}\rightarrow D^{*+}D^{*-}+c.c.$, $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{0}+c.c.$, $e^{+}e^{-}\rightarrow D^{-}D^{*+}+c.c.$,$e^{+}e^{-}\rightarrow D^{0}D^{*-}\pi^{+}+c.c.$, $e^{+}e^{-}\rightarrow \gamma \bar{D}^{0}D^{0}$, $e^{+}e^{-}\rightarrow \gamma_{ISR} \psi(3770)$, $e^{+}e^{-}\rightarrow q\bar{q}$.
+
+\subsubsection{Fit}
+An unbinned maximum likelihood fit is performed to the $D^{0}\bar{D}^{0}$  invariant mass distribution of data in the range of [3.7, 4.05]GeV/$c^{2}$. The number of signal events is free parameter, and the numbers of background events  are scale according to the luminosity, in which the cross-section of open-charm processes are from~\cite{Opench1,Opench2,Opench3,Opench4,Opench5,Opench6}. Fig.~\ref{fitmDDbar_D0_4180} shows the fit result. The signal yield is 11.1 $\pm$ 16.5 and the statistical significance of the signal is determined to be 0.9$\sigma$ by comparing log-likelihood values with and without signal assumption and taking the change of the number of degrees of freedom into account. The background yield for the processes $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}+c.c.$, $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}+c.c.$, $e^{+}e^{-}\rightarrow D^{*+}D^{*-}+c.c.$, $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{0}+c.c.$, $e^{+}e^{-}\rightarrow D^{-}D^{*+}+c.c.$, $e^{+}e^{-}\rightarrow D^{0}D^{*-}\pi^{+}+c.c.$, $e^{+}e^{-}\rightarrow \gamma \bar{D}^{0}D^{0}$, $e^{+}e^{-}\rightarrow \gamma_{ISR} \psi(3770)$, $e^{+}e^{-}\rightarrow q\bar{q}$ are 71.5 $\pm$ 8.5, 56.1 $\pm$ 7.5, 24.8 $\pm$ 4.9, 64.3 $\pm$ 8.0, 20.1 $\pm$ 4.5, 14.6 $\pm$ 3.8, 0.0$\pm$ 42.9, 188.0 $\pm$ 49.8 and 530.9 $\pm$ 230.0 ,respectively. The goodness-of-fit is $\chi^{2}$/ndf = 58.77/41 =1.43. When we calculate the $\chi^{2}$/ndf, we require bin content in each bin must be larger than 7 and combine the bins which bin content less than 7.
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.75\textwidth]{plotofGamDD/fitD0D0barm_4180.eps}
+
+  \caption{\small The fit of the invariant distribution of $D^{0}\bar{D}^{0}$}
+  \label{fitmDDbar_D0_4180}
+\end{figure}
+
+
+\subsubsection{Cross section measurement}
+For the process $e^{+}e^{-} \rightarrow \gamma \chi_{c2}(2P), \chi_{c2}(2P) \to D^{0}\bar{D}^{0}$, the product Born cross section can be calculated using the following formula:
+\begin{equation}
+  \sigma^{B} = \frac{N^{\rm obs}}{\mathcal{L}_{\rm int} (1+\delta^{r}) (1+\delta^{v}) \mathcal{B}_{\chi_{c2}(2P)\rightarrow D^{0}\bar D^{0}} \sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}},
+\end{equation}
+where $N^{\rm obs}$ is the number of observed events; $\mathcal{L}_{\rm int}$ is integrated luminosity; $\mathcal{B}_{\chi_{c2}(2P)\rightarrow D^{0}\bar{D}^{0}}$ is the branching fraction for $\chi_{c2}(2P) \rightarrow D^{0}\bar{D}^{0}$;  $\epsilon_{i,j}$ is selection efficiency for $e^{+}e^{-} \rightarrow  \gamma \chi_{c2} (2P)$, $\chi_{c2} (2P) \rightarrow D^{0}\bar{D}^{0}$ ($D^{0}\rightarrow i, \bar{D}^{0}\rightarrow j$); $\mathcal{B}_{i}$ ($\mathcal{B}_{j}$) is branching fraction for $D^{0}\rightarrow i$($\bar{D}^{0}\rightarrow j$)((3.88$\pm$0.05)\%, (13.9$\pm$0.5)\%, (8.08$\pm$0.2)\%, (4.2$\pm$0.5)\% for $D^{0} \rightarrow K^{-}\pi^{+}/K^{-}\pi^{+}\pi^{0}/K^{-}\pi^{+}\pi^{+}\pi^{-}/K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0}$ respectively)~\cite{PDG}; Then the $\sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}$ is calculated as 0.07447; $(1+\delta^{r})$ is the radiative correction factor, which is defined as below:
+
+\begin{equation}
+    (1+\delta^{r})= \frac{\sigma^{obs}}{\sigma^{B}} = \frac{\int_{0}^{x_{m}} \,\sigma^{B}(s(1-x))F(x,s)d x}{\sigma^{B}(s)}.
+\end{equation}
+Here, $F(x,s)$ is the radiator function, which is from QED calculation~\cite{QEDcalculation} with an accuracy of 0.1\%. $s$ is the C.M. energy and x the energy fraction, and the upper limit of the integral $x_{m} = 1-m^{2}_{th}/s$, corresponds to the hadronic production threshold of the lightest hadronic state. $\sigma^{B}(s)$ is the line shape of  $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)$, here we assume that the events of $\gamma \chi_{c2} (2P)$  are coming from $\psi(4160)$ decays, then we can calculate the value of  $(1+\delta^{r})$ as 0.750. $(1+\delta^{v})$ is the vacuum polarization factor taken from theoretical calculate with an accuracy of 0.05\%~\cite{vpcalculation}, the value is 1.056 at $\sqrt{s}$ = 4.18 GeV. Then we can calculate $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow \gamma D^{0}\bar{D}^{0})$ as (0.64 $\pm$ 0.97) pb.
+
+  Since there is no significant $\chi_{c2}(2P)$ signal observed (significance$<$5$\sigma$), the upper limit on the cross section at the $90\%$ confidence level (C.L.) are given using a Bayesian method~\cite{upperlimit}. In this method, we fit the $M(D^{0}\bar{D}^{0})$ distribution with the number of signal events fixed from 0 to $n$ to get a series of likelihood values . We assume that these observed numbers follow Possion distribution.  The upper limit is determined by examining the cross section corresponding to 90\% of the likelihood distribution as a function of cross section. Fig.~\ref{FitDDbar_D0_up} shows the distribution of likelihood values from the same fit procedures while incrementing the cross section. Then the upper limit of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow  D^{0}\bar{D}^{0})$ is determined to be 2.1 pb.
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.75\textwidth]{plotofGamDD/upperD0D0barm_4180.eps}
+
+  \caption{\small Likelihood values as the function of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow  D^{0}\bar{D}^{0})$.}
+  \label{FitDDbar_D0_up}
+\end{figure}
+
+
+
+\subsection{Study of $e^{+}e^{-}\rightarrow \gamma \chi_{c2}(2P), \chi_{c2}(2P)\rightarrow D^{+}D^{-}$}
+
+After performing all the selection criteria above, we can get a data sample of $\gamma D^{+}D^{-}$. Figure~\ref{mDpandmDm} show the invariant mass distribution of $D^{+}$(left) and $D^{-}$(right), in witch, the dots with error bar are for data, green histogram are for the signal MC, red histogram are for inclusive MC. We can see clear $D^{+}$ and $D^{-}$ signal, the backgrounds of non-$D^{+}D^{-}$ are a flat distribution in the invariant mass distribution of $D^{+}$ and $D^{-}$. We require 1.845$ <$M($D^{+}$)$<$1.890GeV/$c^{2}$ and 1.845 $<$ M($D^{-}$)$<$ 1.890GeV/$c^{2}$ to reject some non-$D^{+}D^{-}$ backgrounds.
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/Dpm_4180_Ksv.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/Dmm_4180_Ksv.eps}
+  \caption{\small The invariant distribution of $D^{+}$(left) and $D^{-}$(right). The  MC are normalized according to the maximum bin content.}
+  \label{mDpandmDm}
+ \end{figure}
+
+For the process $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D^{+}D^{-}$, there will be many backgrounds from opencharm processes under the  $D^{+}$ and $D^{-}$ peaks. As shown in Fig.~\ref{DpgamvsDmgam}, in the Dalitz plot of $M^{2}(D^{+}\gamma)$ and  $M^{2}(D^{-}\gamma)$  for data, we can see clear signal of $D^{*+}$. We can use M($D^{+}\gamma$) - M($D^{+}$) + $M(D^{+})_{PDG}$ and M($D^{-}\gamma$) - M($D^{-}$) + $M(D^{-})_{PDG}$ instead of M($D^{+}\gamma$) and M($D^{-}\gamma$) to represent the invariant mass distribution of $D^{+}\gamma$ and $D^{-}\gamma$ respectively where the $M(D^{+})_{PDG}$ is PDG value of $D^{+}$ mass. This can get better mass resolution by eliminating the mass resolution effect coming from the reconstruction of $D^{+}$. As shown in Fig.~\ref{mDpGam}, we can see clear signal of $D^{*}$ in the distribution of M($D^{+}\gamma$) - M($D^{+}$) + $M(D^{+})_{PDG}$ and M($D^{-}\gamma$) - M($D^{-}$) + $M(D^{-})_{PDG}$ for data and inclusive MC. In this distribution, the first peak is mainly come from the process $e^{+}e^{-} \rightarrow D^{+}D^{-}$, the second peak is mainly come from the process $e^{+}e^{-} \rightarrow D^{*+}D^{-} \rightarrow D^{+}D^{-}\pi^{0}+c.c.$ with  one missing photon from $\pi^{0}$, and the third peak is mainly come from the process $e^{+}e^{-} \rightarrow D^{*+}D^{-} \rightarrow D^{+}D^{-}\gamma+c.c.$.  We require M($D^{+}\gamma$) - M($D^{+}$) + $M(D^{+})_{PDG} >$ 2.03 GeV/$c^{2}$  and M($D^{-}\gamma$) - M($D^{-}$) + $M(D^{-})_{PDG} >$ 2.03 GeV/$c^{2}$ to remove most of the backgrounds from $D^{*}$ events.
+
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+    \includegraphics[width=0.32\textwidth]{plotofGamDD/Dpgamdaliz_4180_data_Ksv.eps}
+    \includegraphics[width=0.32\textwidth]{plotofGamDD/Dpgamdaliz_4180_inclu_Ksv.eps}
+    \includegraphics[width=0.32\textwidth]{plotofGamDD/Dpgamdaliz_4180_sig_Ksv.eps}
+
+  \caption{\small The Dalitz plot of $M^{2}(D^{+}\gamma)$ and $M^{2}(D^{-}\gamma)$ for the process $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D^{+}D^{-}$. The left plot is for data, the middle plot is for inclusive MC and the right plot is for signal MC.}
+  \label{DpgamvsDmgam}
+\end{figure}
+
+
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/mDpgamma_4180_Ksv.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/mDmgamma_4180_Ksv.eps}
+
+  \caption{\small The distribution of M($D^{+}\gamma$) - M($D^{+}$) + $M(D^{+})_{PDG}$ and M($D^{-}\gamma$)- M($D^{-}$) + $M(D^{-})_{PDG}$. The MC are normalized according to the maximum bin content.}
+  \label{mDpGam}
+\end{figure}
+
+After reject the backgrounds from $D^{*}$ events, we can get the invariant distribution of $D^{+}D^{-}$. As show in Fig.~\ref{mDpDm_4180}, the left plot is for the sum of each component of inclusive MC, the right plot is for the data, signal MC and inclusive MC.  From the left plot, we can see the main backgrounds in the distribution of M($D^{+}D^{-}$) are from opencharm processes, ISR processes and continuum processes. According the topology analysis of inclusive MC, the ISR processes are mainly coming from $\gamma_{ISR} \psi(3770)$, the open charm processes are mainly coming from $e^{+}e^{-}\rightarrow D^{+}D^{-}$, $e^{+}e^{-}\rightarrow D^{*+}D^{*-}$, $e^{+}e^{-}\rightarrow D^{-}\pi^{+}D^{*0}$, $e^{+}e^{-}\rightarrow D^{-}D^{*+}$, $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}$, $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}$, $e^{+}e^{-}\rightarrow \gamma D^{+}D^{-}$, as shown in Table~\ref{background_table_Dp}. Those processes become the backgrounds because of the wrong  combination or having the same final states with the signal processes which can't be rejected thoroughly.
+
+\begin{table}[!htbp]
+\caption{The inclusive background MC samples. The numbers of events are scared according to luminosity, but not include the process $e^{+}e^{-}\rightarrow \gamma \bar{D}^{0}D^{0}$.}
+\label{background_table_Dp}
+\begin{tabular}{|c|c|c|}
+  \hline
+  Process  &   Cross section(pb)  & Number of generated events  \\
+  \hline
+  $e^{+}e^{-}\rightarrow \gamma_{ISR} \psi(3770)$ & 60 & 190000  \\
+  $e^{+}e^{-}\rightarrow D^{+}D^{-}$              & 197  & 620000  \\
+  $e^{+}e^{-}\rightarrow D^{*+}D^{*-}$            & 2145   &6780000  \\
+  $e^{+}e^{-}\rightarrow D^{-}\pi^{+}D^{*0}$      & 383  &1210000      \\
+  $e^{+}e^{-}\rightarrow D^{-}D^{*+}$             &  1296  &4100000     \\
+  $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}$        &   1211  &3830000  \\
+  $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}$      &  2173  &6870000       \\
+  $e^{+}e^{-}\rightarrow \gamma D^{+}D^{-}$              &  -    &  200000 \\
+  \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/DpDmm_4180_incl.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/DpDmm_4180_Ksv.eps}
+
+  \caption{\small The invariant mass distribution of $D^{+}D^{-}$.  The left plot is for inclusive MC and each component, the right plot is for data, siganl MC, inclusive MC and sideband backgrounds. The signal MC are normalized arbitrarily and he inclusive MC is normalized according to the maximum bin content.}
+  \label{mDpDm_4180}
+\end{figure}
+
+
+\subsection{Fit the invariant distribution of $D^{+}D^{-}$.}
+
+\subsubsection{Signal shape}
+The shape of the $\chi_{c2}(2P)$ signal can be extracted by using the signal MC. To get the shape of the $\chi_{c2}(2P)$ signal we generated 200,000 events for process $e^{+}e^{-} \rightarrow \chi_{c2}(2P), \chi_{c2}(2P) \rightarrow D^{+}D^{-}$ at $\sqrt{s}$ = 4.18 GeV. The resonance parameters of $\chi_{c2}(2P)$ are coming from PDG value.
+
+\subsubsection{Backgrounds shape}
+
+In the fit, the background shape can be described by MC shapes of each background components. We can get the MC sample of each background component from the inclusive MC, include the processes $e^{+}e^{-}\rightarrow D^{+}D^{-}$, $e^{+}e^{-}\rightarrow D^{*+}D^{*-}$, $e^{+}e^{-}\rightarrow D^{-}\pi^{+}D^{*0}$, $e^{+}e^{-}\rightarrow D^{-}D^{*+}$, $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}$, $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}$, $e^{+}e^{-}\rightarrow \gamma D^{+}D^{-}$, $e^{+}e^{-}\rightarrow \gamma_{ISR} \psi(3770)$, $e^{+}e^{-}\rightarrow q\bar{q}$.
+
+
+
+\subsubsection{Fit}
+An unbinned maximum likelihood fit is performed to the $D^{+}D^{-}$  invariant mass distribution of data in the range of [3.7, 4.05]GeV/$c^{2}$. The number of signal events is free parameter, and the numbers of background events are scale according to the luminosity. Fig.~\ref{fitmDDbar_Dp_4180} shows the fit result. The signal yield is 2.4 $\pm$ 7.3 and the statistical significance of the signal is determined to be 0.4$\sigma$ by comparing log-likelihood values with and without signal assumption and taking the change of the number of degrees of freedom into account. The background yield for the processes $e^{+}e^{-}\rightarrow D^{+}D^{-}$, $e^{+}e^{-}\rightarrow D^{*+}D^{*-}$, $e^{+}e^{-}\rightarrow D^{-}\pi^{+}D^{*0}$, $e^{+}e^{-}\rightarrow D^{-}D^{*+}$, $e^{+}e^{-}\rightarrow \bar{D}^{0}D^{*0}$, $e^{+}e^{-}\rightarrow \bar{D}^{*0}D^{*0}$, $e^{+}e^{-}\rightarrow \gamma D^{+}D^{-}$, $e^{+}e^{-}\rightarrow \gamma_{ISR} \psi(3770)$, $e^{+}e^{-}\rightarrow q\bar{q}$ are 8.0 $\pm$ 2.8, 1.1 $\pm$ 1.1, 0.8 $\pm$ 1.0, 0.9 $\pm$ 0.8, 2.1 $\pm$ 1.5, 0.7 $\pm$ 0.8, 93.2$\pm$9.6, 36.6 $\pm$ 6.1 and 24.7 $\pm$ 5.0, respectively. The goodness-of-fit is $\chi^{2}$/ndf = 19.35/13 = 1.49. When we calculate the $\chi^{2}$/ndf, we require bin content in each bin must be larger than 7 and combine the bins which bin content less than 7.
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+    \includegraphics[width=0.75\textwidth]{plotofGamDD/fitDpDmm_4180_Ksv.eps}
+
+  \caption{\small The fit for the invariant distribution of $D^{+}D^{-}$.}
+  \label{fitmDDbar_Dp_4180}
+\end{figure}
+
+\subsubsection{Cross section measurement}
+For the process $e^{+}e^{-} \rightarrow \gamma \chi_{c2}(2P), \chi_{c2}(2P) \to D^{+}D^{-}$, the product Born cross section can be calculated using the following formula:
+\begin{equation}
+  \sigma^{B} = \frac{N^{\rm obs}}{\mathcal{L}_{\rm int} (1+\delta^{r}) (1+\delta^{v}) \mathcal{B}_{\chi_{c2}(2P)\rightarrow D^{+}D^{-}} \sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}},
+\end{equation}
+where $N^{\rm obs}$ is the number of observed events; $\mathcal{L}_{\rm int}$ is integrated luminosity; $\mathcal{B}_{\chi_{c2}(2P)\rightarrow D^{+}D^{-}}$ is the branching fraction for $\chi_{c2}(2P) \rightarrow D^{+}D^{-}$;  $\epsilon_{i,j}$ is selection efficiency for $e^{+}e^{-} \rightarrow  \gamma \chi_{c2} (2P)$,  $\chi_{c2} (2P) \rightarrow D^{+}D^{-}$ ($D^{+}\rightarrow i, D^{-}\rightarrow j$); $\mathcal{B}_{i}$ ($\mathcal{B}_{j}$) is branching fraction for $D^{+}\rightarrow i$($D^{-}\rightarrow j$)((9.13$\pm$0.19)\%, (5.99$\pm$0.18)\%, (1.47$\pm$0.07)\%, (6.99$\pm$0.27)\%, (3.12$\pm$0.11)\% for $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}/K^{-}\pi^{+}\pi^{+}\pi^{0}/ K^{0}_{S}\pi^{+}/K^{0}_{S}\pi^{+}\pi^{0}/K^{0}_{S}\pi^{+}\pi^{-}\pi^{+}$ respectively)~\cite{PDG}; Then the $\sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}$ is calculated as  0.05560; $(1+\delta^{r})$ is the radiative correction factor.  Here we assume that the events of $\gamma \chi_{c2} (2P)$  are come from $\psi(4160)$ decays, then we can calculate the value of  $(1+\delta^{r})$ as 0.750. $(1+\delta^{v})$ is the vacuum polarization factor taken from theoretical calculation with an accuracy of 0.05\%~\cite{vpcalculation}, the value is 1.056 at $\sqrt{s}$ = 4.18 GeV. Then we can calculate $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow D^{+}D^{-})$ as (0.25 $\pm$ 0.76) pb.
+
+
+
+Science there is no significant $\chi_{c2}(2P)$ signal observed (significance$<$5$\sigma$), the upper limits on the cross section at the $90\%$ confidence level (C.L.) are given using a Bayesian method~\cite{upperlimit}. In this method, we fit the $M(D^{+}D^{-})$ distribution with the number of signal events fixed from 0 to $n$ to get a series of likelihood values . We assume these observed numbers follow Possion distribution.  The upper limit is determined by examining the cros-section corresponding to 90\% of the likelihood distribution as a function of cross section. Fig.~\ref{FitDDbar_Dp_up} shows the distribution of likelihood values from the same fit procedures while incrementing the cross section. Then the upper limit of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow D^{+}D^{-})$ is determined to be 1.6 pb.
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.75\textwidth]{plotofGamDD/upperDpDmm_4180_Ksv.eps}
+
+  \caption{\small Likelihood values as the function of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow  D^{+}D^{-})$.}
+  \label{FitDDbar_Dp_up}
+\end{figure}
+
+
+\subsection{Simultaneous fit of $D^{0}\bar{D}^{0}$ and $D^{+}D^{-}$}
+
+We also  make a simultaneous fit to the distributions $D^{0}\bar{D}^{0}$ and $D^{+}D^{-}$, under assumption of isospin symmetry. If isospin symmetry holds, the only difference in BR is due to phase space. In the decay, $J^{++}$ to $0^{-+}$ $0^{-+}$, it is proportional to $p^{2L+1}$, p is the $D$ momentum in $\chi_{c2} (2P)$ rest frame. Fig.~\ref{fitmDDbar_simu_4180} shows the fit result. The signal yield is 12.0 $\pm$ 15.0 and the statistical significance of the signal is determined to be 0.6$\sigma$. Then we can calculate the the product Born cross section of $e^{+}e^{-} \rightarrow \chi_{c2}(2P), \chi_{c2}(2P) \rightarrow D\bar{D}$ at $\sqrt{s}$ = 4.18 GeV as 0.9 $\pm$ 1.1 pb. Science there is no significant $\chi_{c2}(2P)$ signal observed (significance$<$5$\sigma$), the upper limits on the cross section at the $90\%$ confidence level (C.L.) are estimate using a Bayesian method as 2.5 pb. Fig.~\ref{FitDDbar_simu_up} shows the distribution of likelihood values from the same fit procedures while incrementing the cross section. The result of the simultaneous fit method is comparable with that of the method fitting separately.
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+  \includegraphics[width=0.48\textwidth]{plotofGamDD/fitD0D0barm_4180_simu_Ksv.eps}
+  \includegraphics[width=0.48\textwidth]{plotofGamDD/fitDpDmm_4180_simu_Ksv.eps}
+  \caption{\small The simultaneous fit of the invariant distribution of $D^{+}D^{-}$ for the process $e^{+}e^{-} \rightarrow \chi_{c2}(2P), \chi_{c2}(2P) \rightarrow D\bar{D}$.}
+  \label{fitmDDbar_simu_4180}
+\end{figure}
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.75\textwidth]{plotofGamDD/upperD0andDp_4180_Ksv.eps}
+
+  \caption{\small Likelihood values as the function of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow  D\bar{D})$.}
+  \label{FitDDbar_simu_up}
+\end{figure}
+
+
+\section{Measurement of the $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$}
+
+As shown in Figs.~\ref{mDDbar_4180} and ~\ref{mDpDm_4180}, there are no significant  $\chi_{c0} (2P)$ signal in $D\bar{D}$ invariant mass distribution. The resonance parameters of $\chi_{c0} (2P)$ haven't been determined yet. We can try to determine the production cross section upper limit of  $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$ by assuming a series of $\chi_{c0} (2P)$ resonance parameters. For the mass of $\chi_{c0} (2P)$, we set 50 values from 3730 MeV to 4050 MeV, and for the width, we set it to 10, 15, 20, 24, 37, 50, 100, 150, 200, 250 MeV to cover the range of possible width value and most of nearby XYZ states' width value, such as $X(3915)$, $Z(3930)$, $X(3940)$.
+
+\subsection{Signal shape}
+
+In order to consider the influence of PHSP factor, and we assume that this process is E1 transition dominant. The signal is described as: $E_{\gamma}^{3}$ $\times$ P $\times$ BW(m), where the BW is the Breit-Wigner distribution function of $\chi_{c0} (2P)$, P is the momentum of $D$ meson  in  $\chi_{c0} (2P)$ cms, $E_{\gamma}$ is the the energy of the radiative photon of $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)$ in the Ecms.
+
+\subsection{Background shape}
+
+We used the same background shape as the processes $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D\bar{D}$.
+
+\subsection{Fit}
+
+An unbinned maximum likelihood fit is performed to the $D\bar{D}$  invariant mass distribution of data in the range of [3.7, 4.05]GeV/$c^{2}$. The number of signal events is free parameter, and the number of background events are scale according to the luminosity.  To get the upper limit on the cross section of $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$  at the $90\%$ confidence level (C.L.),  we apply the Bayesian method~\cite{upperlimit}. In this method, we fit the $M(D\bar{D})$ distribution with the number of signal events fixed from 0 to $n$ to get a series of likelihood values. We assume that these observed numbers follow Possion distribution.  The upper limit is determined by examining the  number of observed events  corresponding to 90\% of the likelihood distribution as a function of cross section. Fig.~\ref{nchic0_up} shows the upper limit of number of signal events for $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$  of different $\chi_{c0} (2P)$ mass and width assumption.
+
+\begin{figure}[!htbp]
+ \captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/nchic0_D0up_4180.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/nchic0_Dpup_4180_Ksv.eps}
+
+  \caption{\small The upper limit of events number of $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$ as the function of $\chi_{c0} (2P)$ mass for different $\chi_{c0} (2P)$ width, the left plot is for neutral mode, right plot is for charged mode.}
+  \label{nchic0_up}
+\end{figure}
+
+\subsection{Efficiency}
+
+To get the selection efficiency of each set of $\chi_{c0} (2P)$ resonance parameters, we select 5 assumed mass values in each assumed width value to get the selection efficiency, and then we can get the efficiency curve of each assumed width value, we use a third order polynomial function to parameterize those efficiency curves to get the efficiency of other assumed mass values. The  efficiency curves and the  parameterization results are shown in Fig.~\ref{efficiency_chic0}.
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=1.0\textwidth]{plotofGamDD/efficiency_D0up_4180.eps}
+    \includegraphics[width=1.0\textwidth]{plotofGamDD/efficiency_Dpup_4180_Ksv.eps}
+  \caption{\small The select efficiency of $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$ as a function of $\chi_{c0} (2P)$ mass for different $\chi_{c0} (2P)$ width, the plots in top two rows are for neutral mode and those in bottom two rows are for charged mode.}
+  \label{efficiency_chic0}
+\end{figure}
+
+
+\subsection{Upper limit of cross section}
+
+For the process $e^{+}e^{-} \rightarrow \gamma \chi_{c0}(2P), \chi_{c0}(2P) \to D\bar{D}$, the upper limit of product Born cross section can be calculated using the following formula:
+\begin{equation}
+  \sigma^{B} = \frac{N^{\rm obs}_{up}}{\mathcal{L}_{\rm int} (1+\delta^{r}) (1+\delta^{v}) \mathcal{B}_{\chi_{c0}(2P)\rightarrow D\bar{D}} \sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}},
+\end{equation}
+where $N^{\rm obs}_{up}$ is upper limit of the number of observed events; $\mathcal{L}_{\rm int}$ is integrated luminosity; $\mathcal{B}_{\chi_{c0}(2P)\rightarrow D\bar{D}}$ is the branching fraction for $\chi_{c0}(2P) \rightarrow D\bar{D}$;  $\epsilon_{i,j}$ is selection efficiency for $e^{+}e^{-} \rightarrow  \gamma \chi_{c0} (2P)$, $\chi_{c0} (2P) \rightarrow D\bar{D}$ ($D\rightarrow i, \bar{D}\rightarrow j$); $\mathcal{B}_{i}$ ($\mathcal{B}_{j}$) is branching fraction for $D\rightarrow i$($\bar{D}\rightarrow j$) ((3.88$\pm$0.05)\%, (13.9$\pm$0.5)\%, (8.08$\pm$0.2)\%, (4.2$\pm$0.5)\% for $D^{0} \rightarrow K^{-}\pi^{+}/K^{-}\pi^{+}\pi^{0}/K^{-}\pi^{+}\pi^{+}\pi^{-}/K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0}$ respectively, and (9.13$\pm$0.19)\%, (5.99$\pm$0.18)\%, (1.47$\pm$0.07)\%, (6.99$\pm$0.27)\%, (3.12$\pm$0.11)\% for $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}/K^{-}\pi^{+}\pi^{+}\pi^{0}/ K^{0}_{S}\pi^{+}/K^{0}_{S}\pi^{+}\pi^{0}/K^{0}_{S}\pi^{+}\pi^{-}\pi^{+}$ respectively)~\cite{PDG};  $(1+\delta^{r})$ is the radiative correction factor. Here we assume that the events of $\gamma \chi_{c0} (2P)$ also come from $\psi(4160)$ decays, then we can calculate the value of  $(1+\delta^{r})$ as 0.750. $(1+\delta^{v})$ is the vacuum polarization factor taken from theoretical calculation with an accuracy of 0.05\%~\cite{vpcalculation}, the value is 1.056 at $\sqrt{s}$ = 4.18 GeV. Then the upper limit of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c0} (2P)\rightarrow D\bar{D})$ of different $\chi_{c0} (2P)$ mass and width assumption are shown in Fig.~\ref{crosschic0_up}.
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/crosschic0_D0up_4180.eps}
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/crosschic0_Dpup_4180_Ksv.eps}
+
+  \caption{\small The upper limit of cross section of $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$ as the function of $\chi_{c0} (2P)$ mass for different $\chi_{c0} (2P)$ width, the left plot is for neutral mode, right plot is for charged mode.}
+  \label{crosschic0_up}
+\end{figure}
+
+Since  Belle  Collaboration observed a new structure $X(3860)$ in the $D\bar{D}$ invariant mass distribution of the process $e^{+}e^{-} \to J/\psi D\bar{D}$, and determined it as a candidate of $\chi_{c0}(2P)$. So we also calculate the upper limit for $e^{+}e^{-} \to \gamma $X(3860)$ \to \gamma D\bar{D}$ using the same method like above. Fig.~\ref{fitmDDbar_3860} show the fit result of M($D\bar{D}$) distribution. The signal yield are 55.3 $\pm$ 49.3 and 0.0 $\pm$  29.5 for the neutral mode and charged mode, respectively. The statistical significances of the signal are determined to be 0.34$\sigma$ and 0.52$\sigma$ for the neutral mode and charged mode, respectively. Then we can calculate $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860)$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow  D^{0}\bar{D}^{0})$ and $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860)$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow  D^{+}D^{-})$ as (3.7 $\pm$ 3.1) pb and (0.0 $\pm$ 3.3) pb. Since there is no significant $X(3860)$ signal observed (significance$<$5$\sigma$), the upper limit on the cross section at the 90\%C.L. are given using the same method as $e^{+}e^{-}\to\gamma \chi_{c2}(2P)$. Fig.~\ref{FitDDbar_3860_up} shows the likelihood distribution as a function of cross section. Then the upper limit of $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860))$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow  D^{0}\bar{D}^{0})$ and  $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860))$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow D^{+}D^{-})$ are determined to be 8.0 pb and 4.6 pb.
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/fitD0D0barm_4180_x3860.eps}
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/fitDpDmm_4180_x3860_Ksv.eps}
+  \caption{\small The fit for the invariant mass distribution of $D^{0}\bar{D}^{0}$ and $D^{+}D^{-}$ for $e^{+}e^{-} \rightarrow \gamma X(3860)$.}
+  \label{fitmDDbar_3860}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/upperD0D0barm_x3860_4180}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/upperDpDmm_x3860_4180_Ksv.eps}
+  \caption{\small Likelihood values as the function of cross section for $e^{+}e^{-} \rightarrow \gamma X(3860)$.}
+  \label{FitDDbar_3860_up}
+\end{figure}
+
+
+\subsection{Simultaneous fit of $D^{0}\bar{D}^{0}$ and $D^{+}D^{-}$}
+
+For the $X(3860)$, we also  make a simultaneous fit to the distributions $D^{0}\bar{D}^{0}$ and $D^{+}D^{-}$, under assumption of isospin symmetry. If isospin symmetry holds, the only difference in BR is due to phase space. In the decay, $J^{++}$ to $0^{-+}$ $0^{-+}$, it is proportional to $p^{2L+1}$, p is the $D$ momentum in $X(3860)$ rest frame. Fig.~\ref{fitmDDbar_simu_3860} shows the fit result. The signal yield is 51.4 $\pm$ 46.1 and the statistical significance of the signal is determined to be 0.6$\sigma$. Then we can calculate the the product Born cross section of $e^{+}e^{-} \rightarrow X(3860), X(3860) \rightarrow D\bar{D}$ at $\sqrt{s}$ = 4.18 GeV as 3.8 $\pm$ 3.5 pb. Science there is no significant $X(3860)$ signal observed (significance$<$5$\sigma$), the upper limits on the cross section at the $90\%$ confidence level (C.L.) are estimate using a Bayesian method as 8.8 pb. Fig.~\ref{FitDDbar_simu_3860_up} shows the distribution of likelihood values from the same fit procedures while incrementing the cross section. The result of the simultaneous fit method is comparable with that of the method fitting separately.
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+  \includegraphics[width=0.48\textwidth]{plotofGamDD/fitD0D0barm_4180_x3860_simu_Ksv.eps}
+  \includegraphics[width=0.48\textwidth]{plotofGamDD/fitDpDmm_4180_x3860_simu_Ksv.eps}
+  \caption{\small The simultaneous fit of the invariant distribution of $D^{+}D^{-}$ for the process $e^{+}e^{-} \rightarrow X(3860), X(3860) \rightarrow D\bar{D}$.}
+  \label{fitmDDbar_simu_3860}
+\end{figure}
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.75\textwidth]{plotofGamDD/upperD0andDp_x3860_4180_Ksv.eps}
+
+  \caption{\small Likelihood values as the function of $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860)$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow  D\bar{D})$.}
+  \label{FitDDbar_simu_3860_up}
+\end{figure}
+
+
+\section{Study of $e^{+}e^{-}\rightarrow \gamma X_{2}(4013)\rightarrow \gamma D\bar{D}$}
+
+We also check the signal of $X_{2}(4013)$ in the invariant mass distribution of  $D\bar{D}$, but no significant signal was observed. To extract the yield of $X_{2}(4013)$, an unbinned maximum likelihood fit is performed to the $D\bar{D}$  invariant mass distribution of data in the range of [3.7, 4.05]GeV/$c^{2}$. In the fit we used the signal MC shape of $X_{2}(4013)$ to describe the signal, and use the same background shape as the processes $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D\bar{D}$.  The number of signal events is a free parameter, and the numbers of background events are scaled according to the luminosity. Fig.~\ref{fitmDDbar_4013} shows the fit result. The signal yield are 4.1$\pm$5.3 and 2.6 $\pm$ 2.6 for the neutral mode and charged mode, respectively.  The statistical significances of the signal are determined to be 0.95$\sigma$  and  0.96$\sigma$ for the neutral mode and charged mode, respectively, by comparing log-likelihood values with and without signal assumption and take the change of the number-of-degrees-of-freedom into account. The goodness-of-fit is $\chi^{2}/ndf$ = 57.74/40 = 1.44 and $\chi^{2}/ndf$ = 16.15/12 =1.34 for the neutral mode and charged mode, respectively.
+
+\begin{figure}[!htbp]
+  \captionsetup{justification=raggedright}
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/fitD0D0barm_x4013_4180.eps}
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/fitDpDmm_x4013_4180_Ksv.eps}
+
+  \caption{\small The fit for the invariant mass distribution of $D^{0}\bar{D}^{0}$ and $D^{+}D^{-}$ for $e^{+}e^{-} \rightarrow \gamma X_{2}(4013)$.}
+  \label{fitmDDbar_4013}
+\end{figure}
+
+ \subsection{Cross section  measurement}
+
+For the process $e^{+}e^{-} \rightarrow \gamma X_{2}(4013), X_{2}(4013) \to D\bar{D}$, the product Born cross section can be calculated using the following formula:
+\begin{equation}
+  \sigma^{B} = \frac{N^{\rm obs}}{\mathcal{L}_{\rm int} (1+\delta^{r}) (1+\delta^{v}) \mathcal{B}_{X_{2}(4013)\rightarrow D\bar{D}} \sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}},
+\end{equation}
+where the $\mathcal{B}_{X_{2}(4013)\rightarrow D\bar{D}}$ is the branching fraction for $X_{2}(4013) \rightarrow D\bar{D}$; The $\sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}$ are calculated as 0.012 and 0.012 for neutral mode and charged mode, respectively;  Here we assume that the events of $\gamma X_{2}(4013)$  come from $\psi(4160)$ decays, then we can calculate the value of radiative correction factor $(1+\delta^{r})$ as 0.750; The value of vacuum polarization factor taken $(1+\delta^{v})$ is 1.056 at $\sqrt{s}$ = 4.18 GeV. Then we can calculate $\sigma (e^{+}e^{-}\rightarrow \gamma X_{2}(4013)$ $\cdot$ $\mathcal{B}(X_{2}(4013)\rightarrow  D^{0}\bar{D}^{0})$ and $\sigma (e^{+}e^{-}\rightarrow \gamma X_{2}(4013)$ $\cdot$ $\mathcal{B}(X_{2}(4013)\rightarrow  D^{+}D^{-})$ as (1.6 $\pm$ 2.0) pb and (1.3 $\pm$ 1.3) pb.
+
+Since there is no significant $X_{2}(4013)$ signal observed (significance$<$5$\sigma$), the upper limit on the cross section at the $90\%$ C.L. are given using a Bayesian method~\cite{upperlimit}. In this method, we fit the $M(D\bar{D})$ distribution with the number of signal events fixed from 0 to $n$ to get a series of likelihood values . We assume that these observed numbers follow Possion distribution.  The upper limit is determined by examining the  number of observed events  corresponding to 90\% of the likelihood distribution as a function of cross section. Fig.~\ref{FitDDbar_4013_up} shows the distribution of likelihood values from the same fit procedures while incrementing the cross section. Then the upper limit of $\sigma (e^{+}e^{-}\rightarrow \gamma X_{2}(4013))$ $\cdot$ $\mathcal{B}(X_{2}(4013)\rightarrow  D^{0}\bar{D}^{0})$ and  $\sigma (e^{+}e^{-}\rightarrow \gamma X_{2}(4013))$ $\cdot$ $\mathcal{B}(X_{2}(4013)\rightarrow  D^{+}D^{-})$ are determined to be 5.0 pb and 3.8 pb.
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/upperD0D0barm_x4013_4180.eps}
+    \includegraphics[width=0.45\textwidth]{plotofGamDD/upperDpDmm_x4013_4180_Ksv.eps}
+
+  \caption{\small Likelihood values as the function of cross section for $e^{+}e^{-} \rightarrow \gamma X_{2}(4013)$.}
+  \label{FitDDbar_4013_up}
+\end{figure}
+
+
+
+
+\subsubsection{Systematic Uncertainty estimation}
+
+The systematic uncertainties mainly stem from the integrated luminosity measurement, signal shape, background shape, fitting range, double tag region, tracking efficiency, photon detection, kinematic fit, branching fractions, ISR correction factor. The following subsections describe how errors are estimated in this analysis.
+
+\begin{itemize}
+
+\item The uncertainty from integrated luminosity measurement using Bhabha ($e^{+}e^{-}\rightarrow e^{+}e^{-}$) events~\cite{limu_4180} is estimated to be 1.0\%.
+
+\item In this analysis we use signal MC shape to describe the signal. In order to estimate the systematic uncertainty caused by signal shape, we change the mass and width of the resonance by one standard deviation when generating the MC. Then take the biggest difference between those two situation as the systematic uncertainty of signal shape.
+
+\item In this analysis we use inclusive MC sample 10 times more than data to describe the backgrounds. In order to estimate the systematic uncertainty caused by the uncertainty of the cross section of each process, we varying the cross section of each process by a standard deviations. Then take the difference between those two situations as the systematic uncertainty of backgrounds shape.
+
+\item The uncertainty from the fitting range is obtained by varying the limits of the fit range by 0.005 GeV/$c^{2}$. The difference is taken as the systematic uncertainty of fit range.
+
+\item In order to estimate the systematic uncertainty due to the selection of signal region of double tag, we varying the signal region by 0.005 GeV/$c^{2}$, the difference of the cross section is taken as the systematic uncertainty of signal region of double tag.
+
+\item The efficiency related systematic uncertainty includes the uncertainties from MC statistics, PID, tracking, $\pi^{0}$ and $K_{S}^{0}$ reconstruction, branch fractions of $D$ decays. Uncertainty in each charged track is 1\%~\cite{Tracking} . Uncertainty in particle identification efficiency is 1\% per track~\cite{Tracking}. Uncertainty in the photon is 1\% per photon~\cite{Photon}. Uncertainty in the $\pi^{0}$ reconstruction is 1\% per $\pi^{0}$~\cite{Photon}. For $K^{0}_{S}$ reconstruction, the corresponding uncertainty is 4\% per $K^{0}_{S}$~\cite{K_S0}, this uncertainty already contains geometric acceptance, tracking efficiency, and the efficiency of $K^{0}_{S}$ selection. The systematic error of $\mathcal{B}(D^{*+}\rightarrow\pi^{+}D^{0})$ is taken as 0.74\%, and those of $\mathcal{B}(D^{0} \rightarrow K^{-}\pi^{+})$, $\mathcal{B}(D^{0} \rightarrow K^{-}\pi^{+}\pi^{0})$, $\mathcal{B}(D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-})$ and $\mathcal{B}(D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0})$ are taken as 1.29\%, 3.60\%, 2.60\% and 9.52\%, respectively, and those of $\mathcal{B}(D^{+} \rightarrow K^{-}\pi^{+}\pi^{+})$, $\mathcal{B}(D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{0})$, $\mathcal{B}(D^{+} \rightarrow K^{0}_{S}\pi^{+})$, $\mathcal{B}(D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{0})$, $\mathcal{B}(D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{-}\pi^{+})$ are taken as 2.08\%, 3.01\%, 4.76\%, 3.86\%, and 3.53\%, respectively. The each component of the efficiency related systematic uncertainty are listed in the Tables~\ref{efficiency D0mode} and ~\ref{efficiency Dpmode} for $D^{0}\bar{D}^{0}$ mode and $D^{+}D^{-}$ mode, respectively.  In order to combine the tracking systematic uncertainties of all decay modes considering the correlation of each decay mode, we vary $\epsilon_{i,j}$ by \%$N_{tr}$ and calculate the new $\sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}$, where the $N_{tr}$ is the number of tracks for each decay mode. The maximum change of  $\sum_{i,j}\epsilon_{i,j} \mathcal{B}_{i}\mathcal{B}_{j}$ is taken as the  tracking systematic uncertainties. The same method are also used for PID, photons, $\pi^{0}$ reconstruction, $K^{0}_{S}$ reconstruction and branch ratio. The overall efficiency related systematic uncertainties are obtained by summing all the sources of each component in quadrature by assuming they are independent.
+
+\item The initial state radiation is simulated with KKMC. We assume that the $e^{+}e^{-} \rightarrow \gamma \chi_{c0,2}(2P)$ and $e^{+}e^{-} \rightarrow \gamma X_{2}(4013)$ events are produced via $\psi(4160)$ decays. So the uncertainty of $\psi(4160)$ resonance parameters will introduce uncertainty to the radiative correction factor and efficiency. To estimate
+    this uncertainty, we change the resonant parameters by one standard deviation.  Then take the difference as the systematic uncertainty.
+\end{itemize}
+
+
+Tables~\ref{sys_err_gamDD} and ~\ref{sys_err_gamX} summarize all the systematic uncertainties for processes $e^{+}e^{-} \rightarrow \gamma \chi_{c0,2}(2P)$ and $e^{+}e^{-} \rightarrow \gamma X_{2}(4013)$. The overall systematic uncertainties are obtained by summing all the sources of systematic uncertainties in quadrature by assuming they are independent.
+
+
+\begin{table}[!htbp]
+\captionsetup{justification=raggedright}
+\caption{Efficiency related systematic uncertainties for $D^{0}\bar{D}^{0}$ mode. In the table, 0, 1, 3, 4 represent the decay modes $D^{0} \rightarrow K^{-}\pi^{+}$, $D^{0} \rightarrow K^{-}\pi^{+}\pi^{0}$, $D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-}$, $D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0}$ respectively.}
+\label{efficiency D0mode}
+\begin{tabular}{c c c c c c c c c c}
+\hline \hline
+     DT mode    &PID  &Tracking   &$\pi^{0}$  &$\gamma$  &Branch fraction   \\
+    \hline
+     \{0,0\}     &3    &6     &0  &1 &1.8           \\
+     \{0,1\}     &3    &6     &3  &1 &3.8           \\
+     \{0,3\}     &4    &8     &0  &1 &2.9          \\
+     \{0,4\}     &4    &8     &3  &1 &9.6          \\
+     \{1,0\}     &3    &6     &3  &1 &3.8           \\
+     \{1,1\}     &3    &6     &6  &1 &5.1          \\
+     \{1,3\}     &4    &8     &3  &1 &4.4          \\
+     \{1,4\}     &4    &8     &6  &1 &10.2         \\
+     \{3,0\}     &4    &8     &0  &1 &2.9          \\
+     \{3,1\}     &4    &8     &3  &1 &4.4          \\
+     \{3,3\}     &5    &10    &0  &1 &3.7          \\
+     \{3,4\}     &5    &10    &3  &1 &9.9          \\
+     \{4,0\}     &4    &8     &3  &1 &9.6          \\
+     \{4,1\}     &4    &8     &6  &1 &10.2         \\
+     \{4,3\}     &5    &10    &3  &1 &9.9          \\
+     \{4,4\}     &5    &10    &6  &1 &13.5         \\
+     \hline
+     Total       &3.6  &7.3  &2.9   &1.0  &4.5      \\
+    \hline \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!htbp]
+\captionsetup{justification=raggedright}
+\caption{Efficiency related systematic uncertainties (\%)  for $D^{+}D^{-}$ mode. In the table, 200, 201, 202, 203, 204 represent the decay modes $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}$, $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{0}$, $D^{+} \rightarrow K^{0}_{S}\pi^{+}$, $D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{0}$, $D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{-}\pi^{+}$.}
+\label{efficiency Dpmode}
+\begin{tabular}{c c c c c c c c c c}
+\hline \hline
+    DT mode  &PID  &Tracking  &$\pi^{0}$ &$\gamma$ &$K^{0}_{S}$  &Branch fraction   \\
+    \hline
+     \{200,200\}   &4    &8      &0   &1   &0   &2.9        \\
+     \{200,201\}   &4    &8      &3   &1   &0   &3.7        \\
+     \{200,202\}   &4    &8      &0   &1   &4   &5.2        \\
+     \{200,203\}   &4    &8      &3   &1   &4   &4.4        \\
+     \{200,204\}   &5    &10     &0   &1   &4   &4.1        \\
+     \{201,200\}   &4    &8      &3   &1   &0   &3.7        \\
+     \{201,201\}   &4    &8      &6   &1   &0   &4.2        \\
+     \{201,202\}   &4    &8      &3   &1   &4   &5.6       \\
+     \{201,203\}   &4    &8      &6   &1   &4   &4.9        \\
+     \{201,204\}   &5    &10     &3   &1   &4   &4.6        \\
+     \{202,200\}   &4    &8      &0   &1   &4   &5.2        \\
+     \{202,201\}   &4    &8      &3   &1   &4   &5.6        \\
+     \{202,202\}   &4    &8      &0   &1   &8   &6.7        \\
+     \{202,203\}   &4    &8      &3   &1   &8   &6.1        \\
+     \{202,204\}   &5    &10     &0   &1   &8   &5.9        \\
+     \{203,200\}   &4    &8      &3   &1   &4   &4.4        \\
+     \{203,201\}   &4    &8      &6   &1   &4   &4.9        \\
+     \{203,202\}   &4    &8      &3   &1   &8   &6.1        \\
+     \{203,203\}   &4    &8      &6   &1   &8   &5.5        \\
+     \{203,204\}   &5    &10     &3   &1   &8   &5.2        \\
+     \{204,200\}   &4    &8      &0   &1   &4   &4.1        \\
+     \{204,201\}   &4    &8      &3   &1   &4   &4.6        \\
+     \{204,202\}   &4    &8      &0   &1   &8   &5.9        \\
+     \{204,203\}   &4    &8      &3   &1   &8   &5.2        \\
+     \{204,204\}   &5    &10     &0   &1   &8   &5.0        \\
+     \hline
+     Total         &4.2     &8.3       &1.7    &1.0    &2.3    &4.0            \\
+    \hline \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{\small Summary of systematic uncertainties ($\%$) for $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D\bar{D}$.}
+\label{sys_err_gamDD}
+\begin{tabular}{c| c |c }
+\hline
+%\hline
+     Source / Decay channel     & $D^{0}\bar{D}^{0}$ &  $D^{+}D^{-}$    \\
+    \hline
+    Luminosity                       &1.0    &1.0      \\
+    Efficiency related               &9.7	 &10.4	  	\\
+    Radiative correction             &0.5    &0.5      \\
+    Signal shape                      &6.3    &24.8         \\
+    Background shape                 &21.3   &2.5         \\
+    Fit Range                        &3.3    &0.1         \\
+    Signal region of double tag      &2.3    &0.5         \\
+    \hline
+    Total                            &24.6   &27.0      \\
+    \hline
+    \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!htbp]
+\caption{\small Summary of systematic uncertainties ($\%$) for $e^{+}e^{-}\rightarrow \gamma X_{2}(4013)\rightarrow \gamma D\bar{D}$.}
+\label{sys_err_gamX}
+\begin{tabular}{c| c |c }
+\hline
+%\hline
+     Source / Decay channel     & $D^{0}\bar{D}^{0}$ &  $D^{+}D^{-}$    \\
+    \hline
+    Luminosity                       &1.0    &1.0      \\
+    Efficiency related               &9.8	 &10.1	  	\\
+    Radiative correction             &0.5    &0.5      \\
+    Signal shape                      &29.5   &21.3         \\
+    Background shape                 &35.0   &13.3         \\
+    Fit Range                        &6.8    &1.4         \\
+    Signal region of double tag      &16.9   &11.8         \\
+    \hline
+    Total                            &50.2   &29.6      \\
+    \hline
+    \hline
+\end{tabular}
+\end{table}
+
+
+%For the processes $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)$ and $e^{+}e^{-}\rightarrow \gamma X_{2}(4013)$,
+ To take systematic uncertainty into consideration in the upper limit determination, we smeared the likelihood distribution with a Gaussian:
+\begin{equation}
+    L_{sys}(\sigma)= \int_{-\infty}^{\infty}L(\sigma ')\cdot G(\sigma;\sigma\cdot\delta)d\sigma'
+\end{equation}
+in which the mean value equals cross-section $\sigma$ and the standard deviation equals $\sigma\cdot\delta$, where $\delta$ is percentage systematic uncertainty. Then the upper limit considering the systematic uncertainty of $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow D^{0}\bar{D}^{0})$  and $\sigma (e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P))$ $\cdot$ $\mathcal{B}(\chi_{c2} (2P)\rightarrow \ D^{+}D^{-})$ are determined to be 2.2 pb and 1.8 pb, respectively.  The upper limit considering the systematic uncertainty of $\sigma (e^{+}e^{-}\rightarrow \gamma X_{2}(4013))$ $\cdot$ $\mathcal{B}(X_{2}(4013)\rightarrow  D^{0}\bar{D}^{0})$  and $\sigma (e^{+}e^{-}\rightarrow \gamma X_{2}(4013))$ $\cdot$ $\mathcal{B}(X_{2}(4013)\rightarrow D^{+}D^{-})$ are determined to be 5.7 pb and 4.0 pb, respectively. For the process $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)$,  we quote the systematic uncertainty of process $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)$, the upper limit considering the systematic uncertainty are shown in Fig.~\ref{crosschic0_up_sys}. The upper limit considering the systematic uncertainty of $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860))$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow  D^{0}\bar{D}^{0})$  and $\sigma (e^{+}e^{-}\rightarrow \gamma X(3860))$ $\cdot$ $\mathcal{B}(X(3860)\rightarrow  D^{+}D^{-})$ are determined to be 8.4 pb and 4.8 pb, respectively.
+
+
+%use the function: $\sigma^{up}_{sys} = \frac{\sigma^{up}}{1-\Delta}$ to take systematic uncertainty into consideration. Where the $\Delta$ is systematic uncertainty.
+
+\begin{figure}[!htbp]
+\captionsetup{justification=raggedright}
+
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/crosschic0_D0up_sys_4180.eps}
+    \includegraphics[width=0.49\textwidth]{plotofGamDD/crosschic0_Dpup_sys_4180_Ksv.eps}
+
+  \caption{\small The upper limit of cross section of $e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)\rightarrow \gamma D\bar{D}$ as the function of $\chi_{c0} (2P)$ mass for different $\chi_{c0} (2P)$ width taking the systematic uncertainty into consideration, the left plot is for neutral mode, right plot is for charged mode.}
+  \label{crosschic0_up_sys}
+\end{figure}
+
+
+
+\section{Summary AND DISCUSSION}
+
+In summary, in this analysis, based on a 3.189 fb$^{-1}$ data sample collected at $\sqrt{s}$ = 4.18 GeV, we have searched for $\chi_{c2} (2P)$ via the process $e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)\rightarrow \gamma D\bar{D}$. But we didn't observe significant signal, we determined  the upper limits of $\sigma(e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)) \cdot \mathcal{B}(\chi_{c2} (2P)\rightarrow  D^{0}\bar{D}^{0})$ and  $\sigma(e^{+}e^{-}\rightarrow \gamma \chi_{c2} (2P)) \cdot \mathcal{B}(\chi_{c2} (2P)\rightarrow  D^{+}D^{-})$  at 90\% C.L. as  2.2 pb and 1.8 pb respectively.
+
+If we assume that all $\gamma \chi_{c2} (2P)$ events are come from $\psi(4160)$ decay, we can calculate the production cross section as [(3531.1$\pm$1618.4) pb] of $\psi(4160)$ using its PDG~\cite{PDG} parameters, then we can get the upper limit of the branch ratio:
+\begin{equation}
+\begin{aligned}
+  \mathcal{B}(\psi(4160)\rightarrow \gamma \chi_{c2} (2P))\cdot \mathcal{B}(\chi_{c2} (2P) \rightarrow D^{0}\bar{D}^{0}) &<  7.0 \times 10^{-4}, \\
+%\end{equation}
+%
+%\begin{equation}
+   \mathcal{B}(\psi(4160)\rightarrow \gamma \chi_{c2} (2P))\cdot \mathcal{B}(\chi_{c2} (2P) \rightarrow D^{+}D^{-}) &<  5.6 \times 10^{-4}.
+\end{aligned}
+\end{equation}
+in our results, the branch ratio is comparable with the theory prediction value~\cite{chicj2p_th1}.
+
+We also search for the $\chi_{c0} (2P)$ in the same processes, but didn't observed significant signal. Because the mass and width of $\chi_{c0} (2P)$ haven't been determined yet, so we give the he upper limits of $\sigma(e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)) \cdot \mathcal{B}(\chi_{c0} (2P)\rightarrow  D^{0}\bar{D}^{0})$ and  $\sigma(e^{+}e^{-}\rightarrow \gamma \chi_{c0} (2P)) \cdot \mathcal{B}(\chi_{c0} (2P)\rightarrow  D^{+}D^{-})$ for each assumption of  mass and width of $\chi_{c0} (2P)$ at 90\% C.L.
+
+
+We also search for the possible $X_{2}(4013)$ in the same processes, but didn't observed significant signal. we determined  the upper limits of $\sigma(e^{+}e^{-}\rightarrow \gamma X_{2}(4013)) \cdot \mathcal{B}(X_{2}(4013)\rightarrow  D^{0}\bar{D}^{0})$ and  $\sigma(e^{+}e^{-}\rightarrow \gamma X_{2}(4013)) \cdot \mathcal{B}(X_{2}(4013)\rightarrow  D^{+}D^{-})$  at 90\% C.L. as 5.7 pb and 4.0 pb respectively.
+
+
+
+
+
+\clearpage
+
+\begin{thebibliography}{**}
+\bibitem{Highercharmonia} T. Barnes, S. Godfrey, and E. S. Swanson Phys. Rev. D {\bf 72}, 054026(2005).
+\bibitem{chicJ2p_mass1} E. Eichten, K. Gottfried, T. Kinoshita, K.D. Lane and T. M. Yan, Phys. Rev. D {\bf 17}, 3090 (1978) [Erratum-ibid. {\bf 21}, 313 (1980)]; {\bf 21}, 203 (1980)
+\bibitem{chicJ2p_mass2} S. Godfrey and N. Isgur, Phys. Rev. D {\bf 32}, 189 (1985).
+\bibitem{Belle_3930} S. Uehara {\em et al.} [Belle Collaboration] Phys. Rev. Lett. {\bf 96}, 082003(2006).
+\bibitem{BaBar_3930} B. Aubert {\em et al.} [BABAR Collaboration] Phys. Rev. D {\bf 81}, 092003(2010).
+\bibitem{chic02ptheory1} Feng-Kun Guo and Ulf-G. Mei$\mathcal{B}$ner, 21208.1134v1.
+\bibitem{BaBar_3915} S. Uehara {\em et al.} [Belle Collaboration] Phys. Rev. Lett. {\bf 104}, 092001(2010).
+\bibitem{chicj2p_th1} Bai-Qing Li, Ce Meng, Kuang-Ta Chao, arXiv:1201.4155.
+\bibitem{X3872} S. K. Choi {\em et al.} [Belle Collaboration], Phys. Rev. Lett. {\bf 91}, 262001 (2003).
+\bibitem{CDFX3872} D. Acosta {\em et al.} [CDF Collaboration], Phys. Rev. Lett. {\bf 93}, 072001 (2004).
+\bibitem{D0X3872} V. M. Abazov {\em et al.} [D0 Collaboration], Phys. Rev. Lett. {\bf 93}, 162002 (2004).
+\bibitem{BABARX3872} B. Aubert {\em et al.} [BABARCollaboration], Phys. Rev. D {\bf 71}, 071103 (2005).
+\bibitem{X3872JPC} R. Aaij {\em et al.} [LHCb Collaboration], Phys. Rev. Lett. {\bf 110}, 222001 (2013).
+\bibitem{PRD056004} J. Nieves and M. Pavon Valderrama, Phys. Rev. D {\bf 86}, 056004 (2012).
+\bibitem{PRD076006} C. Hidalgo-Duque, J. Nieves and M. Pavon Valderrama, Phys. Rev. D {\bf 87}, 076006 (2013).
+\bibitem{PRD014029} D. Gamermann, J. Nieves, E. Oset, and E. R. Arriola, Phys. Rev. D {\bf 81}, 014029 (2010).
+\bibitem{DecaywidthX4013} Feng-Kun Guo {\em et al.}, arXiv:1504.00861.
+\bibitem{bepc2} M. Ablikim {\em et al.} [BESIII Collaboration], Nucl. Instrum. Methods Phys. Res., Sect. A {\bf 614}, 345 (2010).
+\bibitem{bepc} J. Z. Bai {\em et al.} [BES Collaboration], Nucl. Instr. and Meth. Phys. Res. Sect. A {\bf 344}, 319 (1994); {\bf 458}, 627 (2001).
+\bibitem{bes3yellow} D. M. Asner {\em et al.}, \Journal\IJMP{24}{499}{2009}.
+\bibitem{cleod} G. Viehhausser {\em et al.}, Nucl. Instr. Meth. A {\bf 462}, 146 (2001).
+\bibitem{cball} M. Oreglia {\em et al.}, \Journal\PRD{25}{2559}{1982}.
+\bibitem{ecms_4180} Hajime Muramatsu, Measurement of Ecm for 4180 Data, \par  http://docbes3.ihep.ac.cn/DocDB/0005/000580/002/Ebeam\_memo\_v2.pdf
+\bibitem{limu_4180} Ke Liu, Measurement of luminosity of the data set taken at 4.18GeV, \par http://docbes3.ihep.ac.cn/DocDB/0006/000603/004/luminosity\_4.18\_v1.0.pdf
+\bibitem{Bhabha} Giovanni Balossini, Carlo M.Carloni calame, Guido Montagna, Oreste Nicrosiniand Fulvio Piccinini, Nucl. Phys. B {\bf 758} (2006) 227.
+
+\bibitem{EvtGen} http://www.slac.stanford.edu/ lange/EvtGen; R. G. Ping {\em et al.}, Chinese Physics C {\bf 32}, 599 417 (2008).
+\bibitem{PDG} C. Patrignani {\em et al.} (Particle Data Group), Chin. Phys. C, {\bf 40}, 100001 (2016) and 2017 update.
+\bibitem{Lundcharm} R. G. PING {\em et al.}, Chinese Phys. C {\bf 32}, 599 (2008).
+\bibitem{PYTHIA} http://home.thep.lu.se/torbjorn/Pythia.html
+\bibitem{KKMC} S. Jadach, B. F. L. Ward, and Z. Was, Comput. Phys. Commun. 130, 260 (2000); Phys. Rev. D {\bf 63}, 113009 (2001).
+\bibitem{amplitude} M. Ablikim {\em et al.}[BESIII Collaboration], Phys. Rev. D {\bf 84}, 092006 (2011).
+\bibitem{DTagAlg} Chunlei Liu, DTag Event Selection at BESIII,\par http://docbes3.ihep.ac.cn/DocDB/0001/000105/004/dtagcut.pdf
+\bibitem{Opench1} G. Pakhlova {\em et al.} [Belle Collaboration], Phys. Rev. D {\bf 77}, 011103 (2008).
+\bibitem{Opench2} G. Pakhlova {\em et al.} [Belle Collaboration], Phys. Rev. Lett. {\bf 98}, 092001 (2007).
+\bibitem{Opench3} G. Pakhlova {\em et al.} [Belle Collaboration], Phys.Rev.Lett. {\bf 100},062001(2008).
+\bibitem{Opench4} G. Pakhlova {\em et al.} [Belle Collaboration], Phys.rev.D {\bf 80},091101(2009).
+\bibitem{Opench5} D. Cronin-Hennessy {\em et al.} [CLEO Collaboration], Phys. Rev. D {\bf 80}, 072001 (2009).
+\bibitem{Opench6} M. Ablikim {\em et al.}, BAM-00211.
+\bibitem{QEDcalculation} E. A. Kuraev and V. S. Fadin, Yad. Fiz. 41, 733-742 (1985).
+\bibitem{upperlimit} J. Conrad {\em et al.}, Phys. Rev. D {\bf 67}, 012002 (2003).
+\bibitem{vpcalculation} Fred Jegerlehner arXiv:1107.4683.
+\bibitem{Tracking}M. Ablikim {\em et al.} [BESIII Collaboration], Phys. Rev. Lett. {\bf 110}, 022001 (2014).
+http://hnbes3.ihep.ac.cn/HyperNews/get/paper29.html
+\bibitem{Photon}M. Ablikim {\em et al.} [BESIII Collaboration], Phys. Rev. D {\bf 81}, 052005 (2010).
+\bibitem{K_S0} M. Ablikim {\em et al.} [BESIII Collaboration], Phys. Rev. D{\bf 87}, 052005 (2013).
+\bibitem{kinematic fit}M. Ablikim {\em et al.} [BESIII Collaboration], Phys. Rev. D {\bf 87}, 012002 (2013).
+\bibitem{chic22p_cross} Kuang-Ta Chao, Zhi-Guo He, Dan Li, Ce Meng 	arXiv:1310.8597v1.
+
+
+\end{thebibliography}
+
+\newpage
+
+\begin{appendix}
+
+ \section{The $D\bar{D}$ double-tag yields from data and efficiencies from MC.}
+
+\begin{table}[!htbp]
+\caption{\small $D^{0}\bar{D}^{0}$  double-tag yields from data and efficiencies from MC, as described in the text. The uncertainties are statistical only.}
+\label{sys_err_gamX}
+\begin{tabular}{l| c |c }
+\hline
+     Tag mode     & Yield &  Efficiency (\%)   \\
+    \hline
+    $D^{0} \rightarrow K^{-}\pi^{+} $ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}$& 23.0$\pm$4.8& 24.7 $\pm$ 1.2  \\
+    $D^{0} \rightarrow K^{-}\pi^{+} $ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{0}$& 91.0$\pm$9.5 & 13.2 $\pm$ 0.3  \\
+    $D^{0} \rightarrow K^{-}\pi^{+} $ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}$ & 50.0$\pm$7.1 & 14.7 $\pm$ 0.5  \\
+    $D^{0} \rightarrow K^{-}\pi^{+} $ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}\pi^{0}$ & 32.0$\pm$5.7  &  4.5 $\pm$ 0.4\\
+    $D^{0} \rightarrow K^{-}\pi^{+}\pi^{0}$ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{0}$   &100.0$\pm$10.0  &6.8 $\pm$ 0.2\\
+    $D^{0} \rightarrow K^{-}\pi^{+}\pi^{0}$ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}$ &146.0$\pm$12.1    &7.3 $\pm$ 0.2\\
+    $D^{0} \rightarrow K^{-}\pi^{+}\pi^{0}$ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}\pi^{0}$ &97.0$\pm$ 9.8   &  2.3$\pm$  0.1 \\
+    $D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-}$ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}$ &  59.0$\pm$ 7.7  &7.7 $\pm$ 0.3    \\
+    $D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-}$ vs.  $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}\pi^{0}$ & 82.0$\pm$ 9.1 & 2.4 $\pm$ 0.2 \\
+    $D^{0} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{-}\pi^{0}$ vs. $\bar{D}^{0} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{+}\pi^{0}$ & 24.0$\pm$ 4.9&  0.5 $\pm$ 0.2 \\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{\small $D^{+}D^{-}$  double-tag yields from data and efficiencies from MC, as described in the text. The uncertainties are statistical only.}
+\label{sys_err_gamX}
+\begin{tabular}{l| c |c }
+\hline
+     Tag mode     & Yield &  Efficiency (\%)   \\
+    \hline
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}$ vs. $D^{-} \rightarrow K^{+}\pi^{-}\pi^{-}$   &31.0 $\pm$  5.6&15.1 $\pm$ 0.4\\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}$ vs. $D^{-} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{0}$ &43.0  $\pm$ 6.6& 6.1 $\pm$ 0.2\\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}$ vs. $D^{-} \rightarrow K^{0}_{S}\pi^{-}$   &8.0  $\pm$ 2.8&9.1$\pm$  0.5\\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}$ vs. $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{0}$ &18.0 $\pm$  4.2&5.2 $\pm$ 0.2  \\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}$ vs. $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{+}\pi^{-}$ &6.0 $\pm$  2.4& 5.8 $\pm$ 0.3    \\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{0}$ vs. $D^{-} \rightarrow K^{+}\pi^{-}\pi^{-}\pi^{0}$ &34.0  $\pm$ 5.8& 2.6 $\pm$ 0.2  \\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{0}$ vs.  $D^{-} \rightarrow K^{0}_{S}\pi^{-}$  &1.0 $\pm$  1.0& 3.5 $\pm$ 0.4\\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{0}$ vs.  $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{0}$ &8.0 $\pm$  2.8& 1.6 $\pm$ 0.1\\
+    $D^{+} \rightarrow K^{-}\pi^{+}\pi^{+}\pi^{0}$ vs. $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{+}\pi^{-}$  &12.0 $\pm$  3.5& 2.0 $\pm$ 0.2\\
+    $D^{+} \rightarrow K^{0}_{S}\pi^{+}$  vs. $D^{-} \rightarrow K^{0}_{S}\pi^{-}$   &0.0 $\pm$  0.0&  3.3 $\pm$ 1.0\\
+    $D^{+} \rightarrow K^{0}_{S}\pi^{+}$  vs.  $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{0}$ &2.0  $\pm$ 1.4& 2.7 $\pm$ 0.3 \\
+    $D^{+} \rightarrow K^{0}_{S}\pi^{+}$  vs.   $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{+}\pi^{-}$   &1.0  $\pm$ 1.0& 3.1 $\pm$ 0.5  \\
+    $D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{0}$  vs.   $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{0}$    &1.0$\pm$   1.0& 1.3 $\pm$ 0.1 \\
+    $D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{0}$  vs.  $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{+}\pi^{-}$  &0.0 $\pm$ 0.0& 1.4 $\pm$ 0.1 \\
+    $D^{+} \rightarrow K^{0}_{S}\pi^{+}\pi^{-}\pi^{+}$ vs. $D^{-} \rightarrow K^{0}_{S}\pi^{-}\pi^{+}\pi^{-}$  &1.0  $\pm$ 1.0& 1.9 $\pm$ 0.4\\
+    \hline
+\end{tabular}
+\end{table}
+
+\end{appendix}
+
+
+\end{document}
+
+
